@@ -42,7 +42,7 @@ Aquí encontrarás una selección de los proyectos más significativos que he de
 * **Descripción:** Algoritmo computacional avanzado para analizar datos de marcadores genéticos y determinar patrones de ancestría poblacional utilizando técnicas de agrupamiento y análisis matricial.
 * **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Identificacion-Ancestro-Genetica)
 
-### 🔹 5. Algoritmo PageRank de Google
+### 🔹 4. Algoritmo PageRank de Google
 * **Descripción:** Implementación del famoso algoritmo de optimización y ordenamiento de páginas web basado en cadenas de Markov y vectores propios (Eigenvectors). El proyecto modela la web como un grafo dirigido para calcular la probabilidad de que un usuario llegue a un sitio específico, resolviendo el problema de convergencia mediante el factor de amortiguación (Damping Factor).
 * **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Algoritmo-PageRank-Google)
   
