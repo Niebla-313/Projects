@@ -11,7 +11,7 @@
 
  ## 📦 Cómo Ejecutar el Proyecto (Opcion 2):
  1. Dar clic aqui:
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Taller4_27321522.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Algoritmo-PageRank-Google/Taller4_27321522.ipynb)
 
 ---
 
