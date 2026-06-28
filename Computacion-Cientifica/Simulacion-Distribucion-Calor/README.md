@@ -34,4 +34,8 @@ La resolución del problema se aborda desde la perspectiva de la **Física Compu
 [⬆️ Volver a Computacion-Cientifica](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica)
 
 ---
-[⬆️ Volver al inicio](https://github.com/Niebla-313/Projects/tree/main)
+<p align="center">
+  <a href="https://github.com/Niebla-313/Projects">
+    <img src="https://img.shields.io/badge/Volver%20al%20Portafolio%20Principal-00599C?style=for-the-badge&logo=github&logoColor=white" alt="Volver al inicio">
+  </a>
+</p>
