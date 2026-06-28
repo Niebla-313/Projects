@@ -1,4 +1,4 @@
-# 🕸️ Algoritmo PageRank de Google
+# 🕸️ Simulacion de Distribucion del Calor
 
 ## 📝 Descripción del Proyecto
 Este proyecto consiste en la implementación computacional del algoritmo **PageRank**, el sistema fundacional desarrollado por Larry Page y Sergey Brin que revolucionó los motores de búsqueda en internet. 
@@ -18,18 +18,9 @@ A nivel de Ciencias de la Computación, el problema se modela utilizando herrami
 * **NumPy** (Para el manejo eficiente de matrices de gran escala)
 ---
 
-## 📦 Cómo Ejecutar el Proyecto (Opcion 1):
-1. Descargar la carpeta `Algoritmo-RageRank Google`.
-    <p align="center">
-      <a href="https://downgit.github.io/#/home?url=https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Algoritmo-PageRank-Google" target="_blank">
-      <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
-    </a>
-  </p>
- 2. Ejecutar script: `python taller4_27321522.py`
-
- ## 📦 Cómo Ejecutar el Proyecto (Opcion 2):
+ ## 📦 Cómo Ejecutar el Proyecto:
  1. Dar clic aqui:
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Algoritmo-PageRank-Google/Taller4_27321522.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Simulacion-Distribucion-Calor/Taller3_27321522.ipynb)
 
 ---
 
