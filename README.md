@@ -49,7 +49,7 @@ Aquí encontrarás una selección de los proyectos más significativos que he de
   
 ### 🔹 5. Sistema de Business Intelligence y Procesos ETL
 * **Descripción:** Diseño e implementación de un flujo de datos de extremo a extremo (End-to-End). Incluye el modelado de la base de datos relacional, la creación de procesos ETL para la extracción y transformación de datos, y el desarrollo de un dashboard interactivo para el análisis de métricas clave y toma de decisiones.
-* **Ver proyecto:** [👉 Ir al Repositorio]([https://github.com/Niebla-313/Projects/tree/main/Datos-BI](https://github.com/Niebla-313/Projects/tree/main/%20Inteligencia-Negocio/Proyecto)
+* **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/%20Inteligencia-Negocio/Proyecto)
 
 ---
 
