@@ -24,7 +24,7 @@ El objetivo principal de esta sección es demostrar habilidades sólidas en la a
 ---
 
 <p align="center">
-  <a href="../">
+  <a href="https://github.com/Niebla-313/Projects">
     <img src="https://img.shields.io/badge/Volver%20al%20Portafolio%20Principal-00599C?style=for-the-badge&logo=github&logoColor=white" alt="Volver al inicio">
   </a>
 </p>
