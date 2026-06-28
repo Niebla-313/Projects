@@ -11,7 +11,7 @@ void read_values_from_file(const char* file, float* data, size_t size) {
         return;
     }
 
-    fread(data, sizeof(float), size / sizeof(float), values); // size / sizeof(float) para obtener el número de elementos.
+    fread(data, sizeof(float), size / sizeof(float), values); // size / sizeof(float) para obtener el nï¿½mero de elementos.
 
     fclose(values);
 }
@@ -25,7 +25,7 @@ void write_values_to_file(const char* file, float* data, size_t size) {
         return;
     }
 
-    size_t num_elements = size / sizeof(float); // Obtener el número de elementos.
+    size_t num_elements = size / sizeof(float); // Obtener el nï¿½mero de elementos.
     int cont = 0;
 
     for (size_t i = 0; i < num_elements; i++) {
@@ -54,7 +54,7 @@ void write_values_to_file(const char* file, float* data, size_t size) {
         return;
     }
 
-    fwrite(data, sizeof(float), size / sizeof(float), values); // size / sizeof(float) para obtener el número de elementos
+    fwrite(data, sizeof(float), size / sizeof(float), values); // size / sizeof(float) para obtener el nï¿½mero de elementos
 
     fclose(values);
 }*/

@@ -33,12 +33,12 @@ void bodyForce(Body* p, float dt, int n, int ind_init,int ind_final) {
 	int i =0;
 #pragma omp parallel for
     for (i = ind_init; i < ind_final; ++i) {
-        // Obtener el número de hilo actual
+        // Obtener el nï¿½mero de hilo actual
         //int thread_id = omp_get_thread_num();
-        // Obtener el número total de hilos
+        // Obtener el nï¿½mero total de hilos
         //int num_threads = omp_get_num_threads();
 
-        // Imprimir el número de hilo y el número total de hilos.
+        // Imprimir el nï¿½mero de hilo y el nï¿½mero total de hilos.
         //printf("Hilo %d de %d, i = %d\n", omp_get_thread_num(), omp_get_num_threads(), i);
         float Fx = 0.0f; float Fy = 0.0f; float Fz = 0.0f;
         
@@ -94,7 +94,7 @@ int main(const int argc, const char** argv) {
   if (MyId == 0) 
   {
       /*
-      * Si soy el maestro realizo la verificacion del tamaño
+      * Si soy el maestro realizo la verificacion del tamaï¿½o
       * para asignar el nombre de los archivos.
       */
       if (argc > 1) nBodies = 2 << atoi(argv[1]);
@@ -119,7 +119,7 @@ int main(const int argc, const char** argv) {
 
   }
   /*
-  * El maestro envia el tamaño de nBodies en dado caso que se ha modificado
+  * El maestro envia el tamaï¿½o de nBodies en dado caso que se ha modificado
   * con los parametros de entrada.
   */
   MPI_Bcast(&nBodies,1,MPI_INT,0, MPI_COMM_WORLD);
