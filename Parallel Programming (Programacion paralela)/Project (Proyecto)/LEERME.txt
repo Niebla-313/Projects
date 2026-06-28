@@ -1,0 +1,10 @@
+COMPILADO:
+mpicc -openmp 01-nbody.c -o (nombre)
+EJECUCION:
+mpiexec -np (numero de procesos) (nombre).exe
+--------------------------------------------------
+	EL MAIN ES EL ARCHIVO 01-nbody.c
+	timer.h es una libreria para el calculo de las operaciones por segundo, se le hicieron
+unos cambios debido a que no lo reconocia en windows.
+	files.h y files2.h son los encargardos de manejar archivo (lectura y escritura) files en c++ y
+files2 en c, en files 2 la escritura no la realice en binario, esto para poder ver los resultados en un .txt.
