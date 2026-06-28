@@ -1,21 +1,27 @@
-# 🕸️ Simulacion de Distribucion del Calor
+# 🔥 Simulación de Distribución de Calor en 2D
 
 ## 📝 Descripción del Proyecto
-Este proyecto consiste en la implementación computacional del algoritmo **PageRank**, el sistema fundacional desarrollado por Larry Page y Sergey Brin que revolucionó los motores de búsqueda en internet. 
+Este proyecto consiste en el desarrollo de un simulador numérico para modelar la propagación de la temperatura sobre una superficie bidimensional. 
 
-El objetivo principal es medir la importancia relativa de una serie de páginas web dentro de una red, asumiendo que un sitio es relevante si recibe enlaces (votos) de otras páginas que también son consideradas importantes.
+A través de este desarrollo, se recrea de forma computacional el fenómeno físico de la conducción térmica (difusión), permitiendo observar cómo evoluciona el estado del sistema desde unas condiciones iniciales y de contorno específicas hasta alcanzar un estado de equilibrio termodinámico (estado estacionario).
 
 ## 🧮 Fundamentos Matemáticos y Enfoque Técnico
-A nivel de Ciencias de la Computación, el problema se modela utilizando herramientas avanzadas de **Álgebra Lineal Numérica** y **Procesos Estocásticos**:
+La resolución del problema se aborda desde la perspectiva de la **Física Computacional** y el **Análisis Numérico**, fundamentándose en los siguientes pilares:
 
-* **Modelado de Redes:** La web se representa como un grafo dirigido, el cual se traduce matemáticamente en una **Matriz de Adyacencia** (y posteriormente en una **Matriz de Transición** de probabilidades).
-* **Cadenas de Markov:** El comportamiento del usuario se simula como un "navegador aleatorio" (Random Surfer) que salta de un enlace a otro de forma estocástica.
-* **El Problema del Fin del Camino (Dead Ends):** Para resolver escenarios donde una página no tiene enlaces de salida o se generan bucles infinitos, se introduce el **Factor de Amortiguación (Damping Factor, típicamente $\alpha = 0.85$)**, permitiendo al usuario "teletransportarse" a cualquier otra página aleatoria de la red.
-* **Convergencia:** El algoritmo calcula el vector propio (Eigenvector) dominante correspondiente al valor propio (Eigenvalue) $\lambda = 1$ mediante el **Método de las Potencias (Power Method)**, garantizando que las puntuaciones de relevancia converjan de forma estable.
+* **Ecuación de la Conducción del Calor:** Se resuelve la Ecuación en Derivadas Parciales (EDP) parabólica clásica definida como:
+  $$\frac{\partial u}{\partial t} = \alpha \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)$$
+  Donde $u(x, y, t)$ representa la temperatura en una coordenada espacial y un instante de tiempo, y $\alpha$ es la difusividad térmica del material.
+* **Discretización por Diferencias Finitas:** Para aproximar las derivadas continuas en un entorno informático, se discretiza el dominio espacial y temporal mediante una rejilla o malla (*grid*). Se aplica el esquema **FTCS** (*Forward-Time Central-Space*), utilizando diferencias hacia adelante para el tiempo y diferencias centrales de segundo orden para el espacio.
+* **Condiciones de Contorno (Fronteras):** El sistema permite configurar condiciones tipo **Dirichlet** (mantener los bordes de la placa a una temperatura constante fija) y analizar el flujo de calor interno de la matriz hacia sus extremos.
+* **Criterio de Estabilidad (CFL):** Para garantizar que el método iterativo numérico converja y no diverja exponencialmente, se asegura estrictamente el cumplimiento de la condición de estabilidad de Courant-Friedrichs-Lewy en dos dimensiones:
+  $$\Delta t \le \frac{\Delta x^2 + \Delta y^2}{8\alpha}$$
 
 ## 🛠️ Tecnologías Utilizadas
 * **Python 3**
-* **NumPy** (Para el manejo eficiente de matrices de gran escala)
+* **NumPy:** Para la manipulación y actualización iterativa de las matrices 2D que representan la malla térmica de forma óptima.
+* **SciPy:** Para el soporte de operaciones matemáticas avanzadas y algoritmos de optimización/convolución si aplica.
+* **Matplotlib:** Para la generación de gráficos dinámicos (mapas de calor interactivos o *heatmaps*) utilizando `imshow` o `contourf`, permitiendo visualizar visualmente el gradiente de temperatura.
+  
 ---
 
  ## 📦 Cómo Ejecutar el Proyecto:
