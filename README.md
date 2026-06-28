@@ -22,6 +22,7 @@ Me apasiona transformar datos en soluciones visuales, optimizar procesos ETL y r
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Pentaho](https://img.shields.io/badge/Pentaho-106EBE?style=for-the-badge&logo=hitachi&logoColor=white)
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
 *Experiencia en diseño de bases de datos relacionales, optimización de consultas, procesos ETL y modelado de datos.*
 
 ---
