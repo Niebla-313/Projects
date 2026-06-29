@@ -20,6 +20,15 @@ El procesamiento digital de imágenes trata a cada canal de una imagen como una 
 * **NumPy:** Uso específico de la función estandarizada `numpy.linalg.svd` para realizar la factorización matricial de alto rendimiento.
 * **Matplotlib:** Para mostrar la comparación visual lado a lado de la imagen original versus la comprimida y graficar la curva de decaimiento de los valores singulares (demostrando matemáticamente cómo se concentra la energía de la información).
 
+## 📦 Cómo Ejecutar el Proyecto (Opcion 1):
+1. Descargar la carpeta `Compresion-Imagenes-SVD`.
+    <p align="center">
+      <a href="https://downgit.github.io/#/home?url=https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Compresion-Imagenes-SVD" target="_blank">
+      <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
+    </a>
+  </p>
+ 2. Subir a Colab  'Taller1.ipynb'.
+ 
  ## 📦 Cómo Ejecutar el Proyecto (Opcion 2):
  1. Dar clic aqui:
    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Compresion-Imagenes-SVD/Taller1.ipynb)
