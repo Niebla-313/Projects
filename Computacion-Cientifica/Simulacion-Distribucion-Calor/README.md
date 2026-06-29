@@ -24,7 +24,16 @@ La resolución del problema se aborda desde la perspectiva de la **Física Compu
   
 ---
 
- ## 📦 Cómo Ejecutar el Proyecto:
+## 📦 Cómo Ejecutar el Proyecto (Opcion 1):
+1. Descargar la carpeta `Simulacion-Distribucion-Calor`.
+    <p align="center">
+      <a href="https://downgit.github.io/#/home?url=https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Simulacion-Distribucion-Calor" target="_blank">
+      <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
+    </a>
+  </p>
+ 2. Subir a Colab `Taller3_27321522.ipynb`
+
+ ## 📦 Cómo Ejecutar el Proyecto (Opcion 2):
  1. Dar clic aqui:
    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Simulacion-Distribucion-Calor/Taller3_27321522.ipynb)
 
