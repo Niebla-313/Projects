@@ -1,35 +1,28 @@
-# 🕸️ Algoritmo PageRank de Google
+# 🖼️ Compresión de Imágenes mediante SVD
 
 ## 📝 Descripción del Proyecto
-Este proyecto consiste en la implementación computacional del algoritmo **PageRank**, el sistema fundacional desarrollado por Larry Page y Sergey Brin que revolucionó los motores de búsqueda en internet. 
+Este proyecto implementa un sistema de compresión de imágenes basado en la **Descomposición en Valores Singulares (SVD)**, una técnica avanzada de álgebra lineal numérica. 
 
-El objetivo principal es medir la importancia relativa de una serie de páginas web dentro de una red, asumiendo que un sitio es relevante si recibe enlaces (votos) de otras páginas que también son consideradas importantes.
+El objetivo es reducir de forma drástica el tamaño de almacenamiento de una imagen digital mediante la aproximación de matrices de bajo rango. El algoritmo permite encontrar un equilibrio óptimo entre el porcentaje de compresión (ahorro de espacio) y la fidelidad o calidad visual de la imagen reconstruida.
 
 ## 🧮 Fundamentos Matemáticos y Enfoque Técnico
-A nivel de Ciencias de la Computación, el problema se modela utilizando herramientas avanzadas de **Álgebra Lineal Numérica** y **Procesos Estocásticos**:
+El procesamiento digital de imágenes trata a cada canal de una imagen como una matriz de píxeles. El algoritmo opera bajo los siguientes principios:
 
-* **Modelado de Redes:** La web se representa como un grafo dirigido, el cual se traduce matemáticamente en una **Matriz de Adyacencia** (y posteriormente en una **Matriz de Transición** de probabilidades).
-* **Cadenas de Markov:** El comportamiento del usuario se simula como un "navegador aleatorio" (Random Surfer) que salta de un enlace a otro de forma estocástica.
-* **El Problema del Fin del Camino (Dead Ends):** Para resolver escenarios donde una página no tiene enlaces de salida o se generan bucles infinitos, se introduce el **Factor de Amortiguación (Damping Factor, típicamente $\alpha = 0.85$)**, permitiendo al usuario "teletransportarse" a cualquier otra página aleatoria de la red.
-* **Convergencia:** El algoritmo calcula el vector propio (Eigenvector) dominante correspondiente al valor propio (Eigenvalue) $\lambda = 1$ mediante el **Método de las Potencias (Power Method)**, garantizando que las puntuaciones de relevancia converjan de forma estable.
+* **Factorización de Matrices (SVD):** Cualquier matriz real $A$ de dimensiones $m \times n$ se puede descomponer en el producto de tres matrices:
+  $$A = U \Sigma V^T$$
+  Donde $U$ ($m \times m$) y $V^T$ ($n \times n$) son matrices ortogonales que contienen los vectores singulares, y $\Sigma$ ($m \times n$) es una matriz diagonal que contiene los **valores singulares** ($\sigma_i$) ordenados de mayor a menor valor de magnitud.
+* **Aproximación de Bajo Rango (Teorema de Eckart-Young-Mirsky):** Los primeros valores singulares contienen la mayor parte de la información geométrica y de contraste de la imagen. Al conservar únicamente los primeros $k$ valores singulares (donde $k \ll \min(m, n)$) y truncar el resto a cero, se obtiene la mejor aproximación posible de rango $k$ de la matriz original ($A_k$).
+* **Eficiencia de Almacenamiento:** En lugar de almacenar $m \times n$ píxeles, el sistema solo necesita almacenar $(m \times k) + k + (n \times k)$ datos. A medida que $k$ disminuye, el archivo pesa considerablemente menos, simulando un algoritmo de compresión con pérdida (*lossy compression*).
+* **Procesamiento Multicanal:** Para imágenes a color, el algoritmo descompone y procesa de forma independiente las tres matrices correspondientes a los canales **RGB** (Rojo, Verde y Azul) para luego unificar el resultado en la reconstrucción final.
 
 ## 🛠️ Tecnologías Utilizadas
 * **Python 3**
-* **NumPy** (Para el manejo eficiente de matrices de gran escala)
----
-
-## 📦 Cómo Ejecutar el Proyecto (Opcion 1):
-1. Descargar la carpeta `Algoritmo-RageRank Google`.
-    <p align="center">
-      <a href="https://downgit.github.io/#/home?url=https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Algoritmo-PageRank-Google" target="_blank">
-      <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
-    </a>
-  </p>
- 2. Ejecutar script: `python taller4_27321522.py`
+* **NumPy:** Uso específico de la función estandarizada `numpy.linalg.svd` para realizar la factorización matricial de alto rendimiento.
+* **Matplotlib:** Para mostrar la comparación visual lado a lado de la imagen original versus la comprimida y graficar la curva de decaimiento de los valores singulares (demostrando matemáticamente cómo se concentra la energía de la información).
 
  ## 📦 Cómo Ejecutar el Proyecto (Opcion 2):
  1. Dar clic aqui:
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Algoritmo-PageRank-Google/Taller4_27321522.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Niebla-313/Projects/blob/main/Computacion-Cientifica/Compresion-Imagenes-SVD/Taller1.ipynb)
 
 ---
 
