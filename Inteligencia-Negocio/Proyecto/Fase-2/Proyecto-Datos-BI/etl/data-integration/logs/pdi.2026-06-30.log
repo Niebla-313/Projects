@@ -1,0 +1,980 @@
+2026-06-30 19:00:02.653 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 19:00:03.589 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [Limpiar]
+2026-06-30 19:00:04.899 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:00:04.979 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Dispatching started for transformation [Transformacion limpieza]
+2026-06-30 19:00:07.336 ERROR <init of Ejecutar script SQL.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to db_seguros:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-06-30 19:00:07.348 ERROR <init of Ejecutar script SQL.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Error initializing step [Ejecutar script SQL]
+2026-06-30 19:00:07.351 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Step [Ejecutar script SQL.0] failed to initialize!
+2026-06-30 19:00:07.354 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished reading query, closing connection.
+2026-06-30 19:00:07.360 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-06-30 19:00:07.364 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-06-30 19:00:07.368 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 19:00:09.122 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:00:09.127 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 19:00:09.384 ERROR <init of Salida Tabla dim_tiempo.0 (Thread-23)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  An error occurred intialising this step: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to db_seguros:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-06-30 19:00:09.389 ERROR <init of Salida Tabla dim_tiempo.0 (Thread-23)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error initializing step [Salida Tabla dim_tiempo]
+2026-06-30 19:00:09.435 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Step [Salida Tabla dim_tiempo.0] failed to initialize!
+2026-06-30 19:00:09.439 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Unexpected error rolling back the database connection.
+2026-06-30 19:00:09.442 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Unable to get database metadata from this database connection
+
+Error connecting to database [proyecto_bi]
+
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3121)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:912)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:904)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:625)
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1272)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+Caused by: org.pentaho.di.core.exception.KettleDatabaseException: 
+Error connecting to database [proyecto_bi]
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3115)
+	... 11 more
+
+2026-06-30 19:00:09.445 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-06-30 19:00:09.450 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-06-30 19:00:09.455 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-06-30 19:00:09.459 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [Limpiar] (result=[false])
+2026-06-30 19:00:09.461 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-06-30 19:13:01.384 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 19:13:01.999 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [Limpiar]
+2026-06-30 19:13:03.284 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:13:03.348 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Dispatching started for transformation [Transformacion limpieza]
+2026-06-30 19:13:05.846 ERROR <init of Ejecutar script SQL.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to db_seguros:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-06-30 19:13:05.851 ERROR <init of Ejecutar script SQL.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Error initializing step [Ejecutar script SQL]
+2026-06-30 19:13:05.853 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Step [Ejecutar script SQL.0] failed to initialize!
+2026-06-30 19:13:05.855 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished reading query, closing connection.
+2026-06-30 19:13:05.857 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-06-30 19:13:05.859 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-06-30 19:13:05.862 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 19:13:07.181 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:13:07.184 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 19:13:07.382 ERROR <init of Salida Tabla dim_tiempo.0 (Thread-23)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  An error occurred intialising this step: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to db_seguros:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-06-30 19:13:07.384 ERROR <init of Salida Tabla dim_tiempo.0 (Thread-23)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error initializing step [Salida Tabla dim_tiempo]
+2026-06-30 19:13:07.414 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Step [Salida Tabla dim_tiempo.0] failed to initialize!
+2026-06-30 19:13:07.415 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Unexpected error rolling back the database connection.
+2026-06-30 19:13:07.417 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Unable to get database metadata from this database connection
+
+Error connecting to database [proyecto_bi]
+
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3121)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:912)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:904)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:625)
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1272)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+Caused by: org.pentaho.di.core.exception.KettleDatabaseException: 
+Error connecting to database [proyecto_bi]
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3115)
+	... 11 more
+
+2026-06-30 19:13:07.419 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-06-30 19:13:07.421 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-06-30 19:13:07.424 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-06-30 19:13:07.425 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [Limpiar] (result=[false])
+2026-06-30 19:13:07.428 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-06-30 19:16:02.345 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 19:16:02.964 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [Limpiar]
+2026-06-30 19:16:03.957 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:04.036 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Dispatching started for transformation [Transformacion limpieza]
+2026-06-30 19:16:06.898 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished reading query, closing connection.
+2026-06-30 19:16:06.903 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2026-06-30 19:16:06.935 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 19:16:08.052 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:08.057 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 19:16:08.321 INFO  <init of Salida Tabla dim_tiempo.0 (Thread-24)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:08.541 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:16:08.708 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:08.833 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:12.651 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:13.428 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:13.493 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:13.633 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:13.718 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:13.745 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.100 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.104 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.108 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.119 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.131 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.148 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.167 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:14.374 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:17.713 INFO  <Transformacion Dim_Tiempo - Salida Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=14976, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:17.727 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-06-30 19:16:17.993 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:17.997 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-06-30 19:16:18.156 INFO  <init of Salida Tabla.0 (Thread-54)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:18.311 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:18.317 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-06-30 19:16:18.319 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:18.333 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:18.380 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-06-30 19:16:18.387 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:18.697 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-06-30 19:16:18.702 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:18.709 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:18.706 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:18.795 INFO  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:18.802 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-06-30 19:16:18.891 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:18.895 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-06-30 19:16:18.950 INFO  <init of Salida Tabla.0 (Thread-68)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:19.003 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:19.011 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:16:19.016 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:19.165 INFO  <Transformacion ClienteLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=300, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:19.173 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-06-30 19:16:19.261 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:19.267 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-06-30 19:16:19.343 INFO  <init of Salida Tabla dim_evaluacion_servicio.0 (Thread-74)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:19.365 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:19.369 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 19:16:19.369 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 19:16:19.401 INFO  <Transformacion Evaluacion ServicioLF - Salida Tabla dim_evaluacion_servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=6, R=6, W=6, U=0, E=0)
+2026-06-30 19:16:19.416 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ELT dim_contrato]
+2026-06-30 19:16:19.523 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:19.528 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Dispatching started for transformation [Transformacion_ContratoLF]
+2026-06-30 19:16:19.590 INFO  <init of Salida Tabla.0 (Thread-80)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:19.633 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:19.639 INFO  <Transformacion_ContratoLF - Add sequence sk_dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:19.641 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:20.049 INFO  <Transformacion_ContratoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:20.054 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_estado_contrato]
+2026-06-30 19:16:20.251 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:20.255 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Dispatching started for transformation [Transformacion Estado ContratoLF]
+2026-06-30 19:16:20.328 INFO  <init of Salida Tabla dim_estado_contrato.0 (Thread-89)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:20.418 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:20.422 INFO  <Transformacion Estado ContratoLF - Seleccionar Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:20.432 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:20.447 INFO  <Transformacion Estado ContratoLF - Agrupar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=3, U=0, E=0)
+2026-06-30 19:16:20.451 INFO  <Transformacion Estado ContratoLF - Add sequence cod_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:16:20.455 INFO  <Transformacion Estado ContratoLF - Add sequence sk_dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:16:20.479 INFO  <Transformacion Estado ContratoLF - Salida Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=3, R=3, W=3, U=0, E=0)
+2026-06-30 19:16:20.493 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_sucursal]
+2026-06-30 19:16:20.631 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:20.637 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Dispatching started for transformation [Transformacion SucursalLF]
+2026-06-30 19:16:20.705 INFO  <init of Salida Tabla.0 (Thread-102)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:20.729 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:20.738 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:20.741 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:20.744 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:20.753 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:20.757 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:21.056 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 19:16:21.357 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais-Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 19:16:21.360 INFO  <Transformacion SucursalLF - Add sequence sk_dim_sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:21.406 INFO  <Transformacion SucursalLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:21.411 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_siniestro]
+2026-06-30 19:16:21.509 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:21.512 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Dispatching started for transformation [Transformacion siniestroLF]
+2026-06-30 19:16:21.559 INFO  <init of Salida Tabla dim_siniestro.0 (Thread-112)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:21.581 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:21.584 INFO  <Transformacion siniestroLF - Add sequence sk_dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 19:16:21.590 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 19:16:21.611 INFO  <Transformacion siniestroLF - Salida Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-06-30 19:16:21.617 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_metas]
+2026-06-30 19:16:21.928 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:21.931 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Dispatching started for transformation [LFTransformation_fact_metas]
+2026-06-30 19:16:22.209 INFO  <init of Table output.0 (Thread-132)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:22.241 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:22.244 INFO  <LFTransformation_fact_metas - Sort cod_prod> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:22.257 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:22.463 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:22.481 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:16:22.518 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:22.529 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:16:26.818 INFO  <LFTransformation_fact_metas - Microsoft Excel metas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=390, O=0, R=0, W=390, U=0, E=0)
+2026-06-30 19:16:26.823 INFO  <LFTransformation_fact_metas - Sort cod_prod 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:27.129 INFO  <LFTransformation_fact_metas - Merge join> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=420, W=390, U=0, E=0)
+2026-06-30 19:16:27.133 INFO  <LFTransformation_fact_metas - Quitar cod_prod y dejar SK> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:27.144 INFO  <LFTransformation_fact_metas - Sort fecha_inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:27.171 INFO  <LFTransformation_fact_metas - Sort fecha_completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:27.494 INFO  <LFTransformation_fact_metas - Merge join 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 19:16:27.495 INFO  <LFTransformation_fact_metas - Select values 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:27.507 INFO  <LFTransformation_fact_metas - Sort fecha_completa2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:27.498 INFO  <LFTransformation_fact_metas - Sort fecha_final> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:27.819 INFO  <LFTransformation_fact_metas - Merge join 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 19:16:27.821 INFO  <LFTransformation_fact_metas - dejar sk_dim fec_final > [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:28.002 INFO  <LFTransformation_fact_metas - Table output> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=390, R=390, W=390, U=0, E=0)
+2026-06-30 19:16:28.011 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_reg_contrato]
+2026-06-30 19:16:28.275 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:28.280 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Dispatching started for transformation [Transformacion FACT_Registro_Contrato]
+2026-06-30 19:16:28.458 INFO  <init of Salida Tabla.0 (Thread-175)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:28.555 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.565 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:28.565 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.566 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:28.580 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:16:28.586 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.589 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:28.591 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:28.596 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.602 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas descrip_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:16:28.602 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-06-30 19:16:28.616 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.623 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:28.633 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:28.636 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:28.735 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:28.741 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 19:16:28.952 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 19:16:28.961 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:29.266 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 19:16:29.281 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:29.580 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:16:29.586 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:29.890 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1003, W=1000, U=0, E=0)
+2026-06-30 19:16:29.902 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:29.910 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:30.221 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:16:30.227 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha_fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:30.236 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:30.548 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:16:30.549 INFO  <Transformacion FACT_Registro_Contrato - Añadir secuencia utilidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:30.806 INFO  <Transformacion FACT_Registro_Contrato - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:30.817 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_reg_siniestro]
+2026-06-30 19:16:31.171 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:31.174 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Dispatching started for transformation [Transformacion Fact_Registro_Siniestro]
+2026-06-30 19:16:31.370 INFO  <init of Salida Tabla Fact_Registro_Siniestro.0 (Thread-242)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:31.401 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.407 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 19:16:31.412 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 19:16:31.417 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.426 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:31.428 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.431 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:31.455 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:16:31.462 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.473 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:31.480 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.486 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:31.491 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:31.498 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:16:31.499 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:31.521 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.525 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:16:31.528 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.527 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.534 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:31.534 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:31.532 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:31.539 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:31.544 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:31.593 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:31.597 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 19:16:31.791 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=600, W=300, U=0, E=0)
+2026-06-30 19:16:31.795 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:31.811 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sinistro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1020, W=1000, U=0, E=0)
+2026-06-30 19:16:31.818 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:32.097 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=330, W=300, U=0, E=0)
+2026-06-30 19:16:32.101 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:32.123 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:16:32.127 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:32.407 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 19:16:32.414 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:32.716 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 19:16:32.723 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.028 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.035 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.038 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:33.349 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:16:33.355 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.361 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:33.674 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:16:33.677 INFO  <Transformacion Fact_Registro_Siniestro - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.677 INFO  <Transformacion Fact_Registro_Siniestro - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.861 INFO  <Transformacion Fact_Registro_Siniestro - Salida Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:16:33.867 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_eval_servicio]
+2026-06-30 19:16:34.111 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:16:34.115 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Fact_Evaluacion_Servicio]
+2026-06-30 19:16:34.212 INFO  <init of Salida Tabla.0 (Thread-301)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:16:34.244 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:34.250 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:34.258 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:16:34.257 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:34.250 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:16:34.270 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas 2 evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 19:16:34.271 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 19:16:34.268 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:16:34.273 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:16:34.277 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:34.290 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:34.297 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=500, O=0, R=0, W=500, U=0, E=0)
+2026-06-30 19:16:34.338 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:16:34.344 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:16:34.589 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo pruducto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=530, W=500, U=0, E=0)
+2026-06-30 19:16:34.594 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:34.896 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=800, W=500, U=0, E=0)
+2026-06-30 19:16:34.901 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:35.203 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=506, W=500, U=0, E=0)
+2026-06-30 19:16:35.207 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha_recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:35.215 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:16:35.523 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave fecha> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=15476, W=500, U=0, E=0)
+2026-06-30 19:16:35.526 INFO  <Transformacion Fact_Evaluacion_Servicio - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:35.527 INFO  <Transformacion Fact_Evaluacion_Servicio - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:35.661 INFO  <Transformacion Fact_Evaluacion_Servicio - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=500, R=500, W=500, U=0, E=0)
+2026-06-30 19:16:35.666 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_eval_servicio] (result=[true])
+2026-06-30 19:16:35.670 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_reg_siniestro] (result=[true])
+2026-06-30 19:16:35.672 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_reg_contrato] (result=[true])
+2026-06-30 19:16:35.675 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_metas] (result=[true])
+2026-06-30 19:16:35.677 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_siniestro] (result=[true])
+2026-06-30 19:16:35.679 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_sucursal] (result=[true])
+2026-06-30 19:16:35.682 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_estado_contrato] (result=[true])
+2026-06-30 19:16:35.683 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ELT dim_contrato] (result=[true])
+2026-06-30 19:16:35.685 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[true])
+2026-06-30 19:16:35.687 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[true])
+2026-06-30 19:16:35.689 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[true])
+2026-06-30 19:16:35.691 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[true])
+2026-06-30 19:16:35.693 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [Limpiar] (result=[true])
+2026-06-30 19:16:35.695 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-06-30 19:25:18.904 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 19:25:19.662 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [Limpiar]
+2026-06-30 19:25:20.651 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:20.720 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Dispatching started for transformation [Transformacion limpieza]
+2026-06-30 19:25:23.602 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished reading query, closing connection.
+2026-06-30 19:25:23.608 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2026-06-30 19:25:23.650 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 19:25:24.890 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:24.893 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 19:25:25.157 INFO  <init of Salida Tabla dim_tiempo.0 (Thread-24)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:25.344 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:25:25.607 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:25.786 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:30.346 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.093 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.257 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.348 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.468 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.504 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.741 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.751 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.762 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.770 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.779 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.800 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:31.808 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:32.730 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:36.045 INFO  <Transformacion Dim_Tiempo - Salida Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=14976, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:36.059 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-06-30 19:25:36.368 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:36.372 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-06-30 19:25:36.517 INFO  <init of Salida Tabla.0 (Thread-54)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:36.955 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:36.961 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-06-30 19:25:36.961 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:36.972 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:36.999 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-06-30 19:25:37.000 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:37.309 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-06-30 19:25:37.313 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:37.321 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:37.320 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:37.371 INFO  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:37.381 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-06-30 19:25:37.460 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:37.465 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-06-30 19:25:37.522 INFO  <init of Salida Tabla.0 (Thread-68)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:37.580 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:37.584 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:37.592 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:25:37.744 INFO  <Transformacion ClienteLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=300, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:37.755 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-06-30 19:25:37.867 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:37.870 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-06-30 19:25:37.934 INFO  <init of Salida Tabla dim_evaluacion_servicio.0 (Thread-75)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:37.957 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:37.962 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 19:25:37.965 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 19:25:37.997 INFO  <Transformacion Evaluacion ServicioLF - Salida Tabla dim_evaluacion_servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=6, R=6, W=6, U=0, E=0)
+2026-06-30 19:25:38.004 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ELT dim_contrato]
+2026-06-30 19:25:38.106 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:38.111 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Dispatching started for transformation [Transformacion_ContratoLF]
+2026-06-30 19:25:38.203 INFO  <init of Salida Tabla.0 (Thread-81)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:38.265 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:38.269 INFO  <Transformacion_ContratoLF - Add sequence sk_dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:38.277 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:38.727 INFO  <Transformacion_ContratoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:38.733 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_estado_contrato]
+2026-06-30 19:25:38.901 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:38.904 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Dispatching started for transformation [Transformacion Estado ContratoLF]
+2026-06-30 19:25:38.980 INFO  <init of Salida Tabla dim_estado_contrato.0 (Thread-90)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:39.067 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:39.070 INFO  <Transformacion Estado ContratoLF - Seleccionar Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:39.084 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:39.090 INFO  <Transformacion Estado ContratoLF - Agrupar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=3, U=0, E=0)
+2026-06-30 19:25:39.094 INFO  <Transformacion Estado ContratoLF - Add sequence cod_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:25:39.101 INFO  <Transformacion Estado ContratoLF - Add sequence sk_dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:25:39.155 INFO  <Transformacion Estado ContratoLF - Salida Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=3, R=3, W=3, U=0, E=0)
+2026-06-30 19:25:39.160 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_sucursal]
+2026-06-30 19:25:39.332 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:39.341 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Dispatching started for transformation [Transformacion SucursalLF]
+2026-06-30 19:25:39.439 INFO  <init of Salida Tabla.0 (Thread-103)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:39.477 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:39.481 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:39.486 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:39.492 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:39.493 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:39.502 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:39.794 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 19:25:40.095 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais-Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 19:25:40.098 INFO  <Transformacion SucursalLF - Add sequence sk_dim_sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:40.131 INFO  <Transformacion SucursalLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:40.139 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_siniestro]
+2026-06-30 19:25:40.210 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:40.215 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Dispatching started for transformation [Transformacion siniestroLF]
+2026-06-30 19:25:40.282 INFO  <init of Salida Tabla dim_siniestro.0 (Thread-113)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:40.309 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:40.313 INFO  <Transformacion siniestroLF - Add sequence sk_dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 19:25:40.315 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 19:25:40.415 INFO  <Transformacion siniestroLF - Salida Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-06-30 19:25:40.426 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_metas]
+2026-06-30 19:25:40.734 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:40.738 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Dispatching started for transformation [LFTransformation_fact_metas]
+2026-06-30 19:25:41.006 INFO  <init of Table output.0 (Thread-133)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:41.054 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:41.057 INFO  <LFTransformation_fact_metas - Sort cod_prod> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:41.065 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:41.290 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:41.307 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:41.327 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:25:41.342 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:25:46.088 INFO  <LFTransformation_fact_metas - Microsoft Excel metas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=390, O=0, R=0, W=390, U=0, E=0)
+2026-06-30 19:25:46.095 INFO  <LFTransformation_fact_metas - Sort cod_prod 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:46.407 INFO  <LFTransformation_fact_metas - Merge join> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=420, W=390, U=0, E=0)
+2026-06-30 19:25:46.410 INFO  <LFTransformation_fact_metas - Quitar cod_prod y dejar SK> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:46.416 INFO  <LFTransformation_fact_metas - Sort fecha_inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:46.449 INFO  <LFTransformation_fact_metas - Sort fecha_completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:46.769 INFO  <LFTransformation_fact_metas - Merge join 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 19:25:46.771 INFO  <LFTransformation_fact_metas - Select values 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:46.773 INFO  <LFTransformation_fact_metas - Sort fecha_final> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:46.791 INFO  <LFTransformation_fact_metas - Sort fecha_completa2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:47.097 INFO  <LFTransformation_fact_metas - Merge join 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 19:25:47.099 INFO  <LFTransformation_fact_metas - dejar sk_dim fec_final > [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:47.251 INFO  <LFTransformation_fact_metas - Table output> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=390, R=390, W=390, U=0, E=0)
+2026-06-30 19:25:47.260 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_reg_contrato]
+2026-06-30 19:25:47.493 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:47.498 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Dispatching started for transformation [Transformacion FACT_Registro_Contrato]
+2026-06-30 19:25:47.624 INFO  <init of Salida Tabla.0 (Thread-176)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:47.673 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.682 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.687 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-06-30 19:25:47.683 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:47.688 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:25:47.688 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas descrip_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 19:25:47.719 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.736 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.738 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.757 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:47.771 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:47.762 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:47.771 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:47.781 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:47.781 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:47.928 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:47.933 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 19:25:48.118 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 19:25:48.125 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:48.429 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 19:25:48.437 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:48.739 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:25:48.754 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:49.050 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1003, W=1000, U=0, E=0)
+2026-06-30 19:25:49.058 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:49.067 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:49.379 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:25:49.386 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha_fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:49.397 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:49.709 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:25:49.717 INFO  <Transformacion FACT_Registro_Contrato - Añadir secuencia utilidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:49.851 INFO  <Transformacion FACT_Registro_Contrato - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:49.858 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_reg_siniestro]
+2026-06-30 19:25:50.210 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:50.213 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Dispatching started for transformation [Transformacion Fact_Registro_Siniestro]
+2026-06-30 19:25:50.398 INFO  <init of Salida Tabla Fact_Registro_Siniestro.0 (Thread-243)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:50.441 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.444 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 19:25:50.511 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.511 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:50.511 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.521 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 19:25:50.512 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:50.514 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:50.558 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:25:50.554 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:50.546 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.545 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:50.534 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.511 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.530 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:50.532 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.535 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:50.655 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:50.587 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:50.566 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.656 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:50.530 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:25:50.672 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:50.626 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 19:25:50.700 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:50.706 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 19:25:50.818 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=600, W=300, U=0, E=0)
+2026-06-30 19:25:50.822 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:50.856 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sinistro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1020, W=1000, U=0, E=0)
+2026-06-30 19:25:50.862 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:51.124 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=330, W=300, U=0, E=0)
+2026-06-30 19:25:51.128 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:51.166 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:25:51.171 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:51.437 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 19:25:51.443 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:51.746 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 19:25:51.753 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.057 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.063 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.069 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:52.379 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:25:52.384 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.387 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:52.693 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 19:25:52.696 INFO  <Transformacion Fact_Registro_Siniestro - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.695 INFO  <Transformacion Fact_Registro_Siniestro - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.900 INFO  <Transformacion Fact_Registro_Siniestro - Salida Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 19:25:52.907 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_eval_servicio]
+2026-06-30 19:25:53.095 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 19:25:53.099 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Fact_Evaluacion_Servicio]
+2026-06-30 19:25:53.218 INFO  <init of Salida Tabla.0 (Thread-302)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 19:25:53.247 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:53.259 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 19:25:53.262 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 19:25:53.274 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:53.279 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 19:25:53.284 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:53.283 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 19:25:53.297 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=500, O=0, R=0, W=500, U=0, E=0)
+2026-06-30 19:25:53.298 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas 2 evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 19:25:53.307 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:53.296 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:53.318 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 19:25:53.362 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 19:25:53.368 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 19:25:53.595 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo pruducto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=530, W=500, U=0, E=0)
+2026-06-30 19:25:53.599 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:53.901 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=800, W=500, U=0, E=0)
+2026-06-30 19:25:53.905 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:54.207 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=506, W=500, U=0, E=0)
+2026-06-30 19:25:54.212 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha_recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:54.216 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 19:25:54.520 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave fecha> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=15476, W=500, U=0, E=0)
+2026-06-30 19:25:54.523 INFO  <Transformacion Fact_Evaluacion_Servicio - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:54.523 INFO  <Transformacion Fact_Evaluacion_Servicio - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:54.724 INFO  <Transformacion Fact_Evaluacion_Servicio - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=500, R=500, W=500, U=0, E=0)
+2026-06-30 19:25:54.733 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_eval_servicio] (result=[true])
+2026-06-30 19:25:54.735 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_reg_siniestro] (result=[true])
+2026-06-30 19:25:54.739 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_reg_contrato] (result=[true])
+2026-06-30 19:25:54.740 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_metas] (result=[true])
+2026-06-30 19:25:54.743 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_siniestro] (result=[true])
+2026-06-30 19:25:54.746 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_sucursal] (result=[true])
+2026-06-30 19:25:54.748 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_estado_contrato] (result=[true])
+2026-06-30 19:25:54.750 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ELT dim_contrato] (result=[true])
+2026-06-30 19:25:54.752 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[true])
+2026-06-30 19:25:54.753 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[true])
+2026-06-30 19:25:54.755 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[true])
+2026-06-30 19:25:54.757 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[true])
+2026-06-30 19:25:54.760 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [Limpiar] (result=[true])
+2026-06-30 19:25:54.762 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-06-30 20:18:28.387 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 20:18:29.180 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [Limpiar]
+2026-06-30 20:18:30.985 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:31.135 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Dispatching started for transformation [Transformacion limpieza]
+2026-06-30 20:18:36.477 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished reading query, closing connection.
+2026-06-30 20:18:36.483 INFO  <Transformacion limpieza - Ejecutar script SQL> [/jobs/Job_dim_fact.kjb  /jobs/Transformacion limpieza.ktr]  Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2026-06-30 20:18:36.515 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 20:18:37.824 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:37.827 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 20:18:38.165 INFO  <init of Salida Tabla dim_tiempo.0 (Thread-24)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:38.384 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 20:18:38.542 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:38.661 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:43.625 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:44.631 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:44.779 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.025 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.218 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.235 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.311 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.313 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.330 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.340 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.342 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.364 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.371 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:45.945 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:49.652 INFO  <Transformacion Dim_Tiempo - Salida Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=14976, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:18:49.667 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-06-30 20:18:50.064 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:50.069 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-06-30 20:18:50.269 INFO  <init of Salida Tabla.0 (Thread-54)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:50.426 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:50.431 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:50.432 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-06-30 20:18:50.436 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:18:50.471 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-06-30 20:18:50.471 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:50.781 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-06-30 20:18:50.788 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:50.794 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:50.802 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:50.857 INFO  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:50.869 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-06-30 20:18:50.972 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:50.976 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-06-30 20:18:51.025 INFO  <init of Salida Tabla.0 (Thread-68)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:51.087 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:51.094 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:18:51.095 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 20:18:51.322 INFO  <Transformacion ClienteLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=300, R=300, W=300, U=0, E=0)
+2026-06-30 20:18:51.330 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-06-30 20:18:51.464 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:51.468 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-06-30 20:18:51.523 INFO  <init of Salida Tabla dim_evaluacion_servicio.0 (Thread-75)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:51.540 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:51.546 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 20:18:51.546 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 20:18:51.565 INFO  <Transformacion Evaluacion ServicioLF - Salida Tabla dim_evaluacion_servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=6, R=6, W=6, U=0, E=0)
+2026-06-30 20:18:51.573 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ELT dim_contrato]
+2026-06-30 20:18:51.697 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:51.700 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Dispatching started for transformation [Transformacion_ContratoLF]
+2026-06-30 20:18:51.752 INFO  <init of Salida Tabla.0 (Thread-81)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:51.790 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:51.796 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:18:51.797 INFO  <Transformacion_ContratoLF - Add sequence sk_dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:18:52.143 INFO  <Transformacion_ContratoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:18:52.160 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_estado_contrato]
+2026-06-30 20:18:52.349 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:52.352 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Dispatching started for transformation [Transformacion Estado ContratoLF]
+2026-06-30 20:18:52.421 INFO  <init of Salida Tabla dim_estado_contrato.0 (Thread-90)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:52.491 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:52.499 INFO  <Transformacion Estado ContratoLF - Seleccionar Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:18:52.499 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:18:52.512 INFO  <Transformacion Estado ContratoLF - Agrupar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=3, U=0, E=0)
+2026-06-30 20:18:52.517 INFO  <Transformacion Estado ContratoLF - Add sequence cod_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 20:18:52.520 INFO  <Transformacion Estado ContratoLF - Add sequence sk_dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 20:18:52.561 INFO  <Transformacion Estado ContratoLF - Salida Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=3, R=3, W=3, U=0, E=0)
+2026-06-30 20:18:52.567 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_sucursal]
+2026-06-30 20:18:52.693 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:52.697 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Dispatching started for transformation [Transformacion SucursalLF]
+2026-06-30 20:18:52.767 INFO  <init of Salida Tabla.0 (Thread-103)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:52.787 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:52.790 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:18:52.805 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:52.809 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:18:52.810 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:52.822 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:18:53.116 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 20:18:53.417 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais-Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-06-30 20:18:53.421 INFO  <Transformacion SucursalLF - Add sequence sk_dim_sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:53.526 INFO  <Transformacion SucursalLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=30, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:53.532 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_siniestro]
+2026-06-30 20:18:53.628 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:53.632 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Dispatching started for transformation [Transformacion siniestroLF]
+2026-06-30 20:18:53.688 INFO  <init of Salida Tabla dim_siniestro.0 (Thread-113)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:53.709 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:53.710 INFO  <Transformacion siniestroLF - Add sequence sk_dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 20:18:53.717 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 20:18:53.734 INFO  <Transformacion siniestroLF - Salida Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-06-30 20:18:53.742 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_metas]
+2026-06-30 20:18:54.045 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:18:54.052 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Dispatching started for transformation [LFTransformation_fact_metas]
+2026-06-30 20:18:55.040 INFO  <init of Table output.0 (Thread-133)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:18:55.351 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:55.354 INFO  <LFTransformation_fact_metas - Sort cod_prod> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:18:55.364 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:18:55.596 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:55.607 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-06-30 20:18:55.612 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 20:18:55.617 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 20:19:01.286 INFO  <LFTransformation_fact_metas - Microsoft Excel metas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=390, O=0, R=0, W=390, U=0, E=0)
+2026-06-30 20:19:01.295 INFO  <LFTransformation_fact_metas - Sort cod_prod 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:01.601 INFO  <LFTransformation_fact_metas - Merge join> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=420, W=390, U=0, E=0)
+2026-06-30 20:19:01.606 INFO  <LFTransformation_fact_metas - Quitar cod_prod y dejar SK> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:01.620 INFO  <LFTransformation_fact_metas - Sort fecha_inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:01.653 INFO  <LFTransformation_fact_metas - Sort fecha_completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:01.972 INFO  <LFTransformation_fact_metas - Merge join 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 20:19:01.974 INFO  <LFTransformation_fact_metas - Select values 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:01.976 INFO  <LFTransformation_fact_metas - Sort fecha_final> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:01.990 INFO  <LFTransformation_fact_metas - Sort fecha_completa2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:02.299 INFO  <LFTransformation_fact_metas - Merge join 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=15366, W=390, U=0, E=0)
+2026-06-30 20:19:02.302 INFO  <LFTransformation_fact_metas - dejar sk_dim fec_final > [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:02.509 INFO  <LFTransformation_fact_metas - Table output> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=390, R=390, W=390, U=0, E=0)
+2026-06-30 20:19:02.514 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_reg_contrato]
+2026-06-30 20:19:02.825 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:19:02.828 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Dispatching started for transformation [Transformacion FACT_Registro_Contrato]
+2026-06-30 20:19:02.956 INFO  <init of Salida Tabla.0 (Thread-176)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:19:02.997 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.004 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:19:03.016 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.020 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.025 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:19:03.019 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:03.036 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.031 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.019 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:03.047 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:03.041 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:19:03.030 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:19:03.056 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-06-30 20:19:03.058 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla Dim_Cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 20:19:03.065 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas descrip_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-06-30 20:19:03.188 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:03.192 INFO  <Transformacion FACT_Registro_Contrato - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 20:19:03.381 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 20:19:03.393 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:03.701 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 20:19:03.710 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:04.014 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 20:19:04.022 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:04.327 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1003, W=1000, U=0, E=0)
+2026-06-30 20:19:04.338 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:04.349 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:04.663 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha inicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 20:19:04.669 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas fecha_fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:04.678 INFO  <Transformacion FACT_Registro_Contrato - Ordenar filas dim_tiempo 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:04.992 INFO  <Transformacion FACT_Registro_Contrato - Unión por clave fecha fin> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 20:19:04.994 INFO  <Transformacion FACT_Registro_Contrato - Añadir secuencia utilidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:05.126 INFO  <Transformacion FACT_Registro_Contrato - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:05.132 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_reg_siniestro]
+2026-06-30 20:19:05.670 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:19:05.675 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Dispatching started for transformation [Transformacion Fact_Registro_Siniestro]
+2026-06-30 20:19:05.898 INFO  <init of Salida Tabla Fact_Registro_Siniestro.0 (Thread-243)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:19:05.951 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:05.970 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:19:05.967 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:05.967 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:05.961 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:05.965 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:05.978 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:05.985 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:19:05.985 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:05.955 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas nro_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-06-30 20:19:05.985 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 20:19:05.988 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:19:06.013 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas codigo cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:06.011 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-06-30 20:19:06.030 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 20:19:06.046 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:06.049 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:06.050 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:19:06.055 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:06.061 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Registro Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:19:06.064 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:19:06.072 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:06.080 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:06.084 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-06-30 20:19:06.171 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:06.246 INFO  <Transformacion Fact_Registro_Siniestro - Entrada Tabla fechas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=14976, O=0, R=0, W=29952, U=0, E=0)
+2026-06-30 20:19:06.333 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=600, W=300, U=0, E=0)
+2026-06-30 20:19:06.339 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:06.438 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sinistro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1020, W=1000, U=0, E=0)
+2026-06-30 20:19:06.446 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:06.641 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=330, W=300, U=0, E=0)
+2026-06-30 20:19:06.646 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas cliente 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:06.751 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 20:19:06.756 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:06.954 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1300, W=1000, U=0, E=0)
+2026-06-30 20:19:06.960 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:07.262 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1030, W=1000, U=0, E=0)
+2026-06-30 20:19:07.269 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas contrato 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:07.575 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave contrato 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=2000, W=1000, U=0, E=0)
+2026-06-30 20:19:07.581 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:07.587 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:07.896 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 20:19:07.902 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha_respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:07.912 INFO  <Transformacion Fact_Registro_Siniestro - Ordenar filas fecha completa 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:08.213 INFO  <Transformacion Fact_Registro_Siniestro - Unión por clave fecha respuesta> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=15976, W=1000, U=0, E=0)
+2026-06-30 20:19:08.216 INFO  <Transformacion Fact_Registro_Siniestro - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:08.216 INFO  <Transformacion Fact_Registro_Siniestro - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:08.463 INFO  <Transformacion Fact_Registro_Siniestro - Salida Tabla Fact_Registro_Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Siniestro.ktr]  Finished processing (I=0, O=1000, R=1000, W=1000, U=0, E=0)
+2026-06-30 20:19:08.469 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL fact_eval_servicio]
+2026-06-30 20:19:08.681 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 20:19:08.683 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Fact_Evaluacion_Servicio]
+2026-06-30 20:19:08.763 INFO  <init of Salida Tabla.0 (Thread-302)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Connected to database [Docker] (commit=1000)
+2026-06-30 20:19:08.804 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:08.809 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-06-30 20:19:08.817 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-06-30 20:19:08.834 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:08.837 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas 2 evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-06-30 20:19:08.842 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:08.845 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas cod_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-06-30 20:19:08.846 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-06-30 20:19:08.856 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-06-30 20:19:08.858 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:08.856 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:08.872 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=500, O=0, R=0, W=500, U=0, E=0)
+2026-06-30 20:19:08.911 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-06-30 20:19:08.915 INFO  <Transformacion Fact_Evaluacion_Servicio - Entrada Tabla dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 20:19:09.170 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo pruducto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=530, W=500, U=0, E=0)
+2026-06-30 20:19:09.175 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:09.477 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave codigo cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=800, W=500, U=0, E=0)
+2026-06-30 20:19:09.481 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas codigo evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:09.784 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave evaluacion servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=506, W=500, U=0, E=0)
+2026-06-30 20:19:09.789 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha_recomienda> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:09.798 INFO  <Transformacion Fact_Evaluacion_Servicio - Ordenar filas fecha completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 20:19:10.105 INFO  <Transformacion Fact_Evaluacion_Servicio - Unión por clave fecha> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=15476, W=500, U=0, E=0)
+2026-06-30 20:19:10.106 INFO  <Transformacion Fact_Evaluacion_Servicio - Añadir secuencia cantidad> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:10.107 INFO  <Transformacion Fact_Evaluacion_Servicio - Formula> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:10.318 INFO  <Transformacion Fact_Evaluacion_Servicio - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=500, R=500, W=500, U=0, E=0)
+2026-06-30 20:19:10.323 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_eval_servicio] (result=[true])
+2026-06-30 20:19:10.326 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL fact_reg_siniestro] (result=[true])
+2026-06-30 20:19:10.330 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_reg_contrato] (result=[true])
+2026-06-30 20:19:10.331 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_metas] (result=[true])
+2026-06-30 20:19:10.334 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_siniestro] (result=[true])
+2026-06-30 20:19:10.336 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_sucursal] (result=[true])
+2026-06-30 20:19:10.338 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_estado_contrato] (result=[true])
+2026-06-30 20:19:10.339 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ELT dim_contrato] (result=[true])
+2026-06-30 20:19:10.341 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[true])
+2026-06-30 20:19:10.343 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[true])
+2026-06-30 20:19:10.345 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[true])
+2026-06-30 20:19:10.347 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[true])
+2026-06-30 20:19:10.349 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [Limpiar] (result=[true])
+2026-06-30 20:19:10.351 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-06-30 21:48:11.578 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-06-30 21:48:12.164 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-06-30 21:48:14.319 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-06-30 21:48:14.388 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-06-30 21:48:18.059 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-06-30 21:48:18.337 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 21:48:18.610 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 21:48:22.766 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-06-30 21:48:22.808 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error in step, asking everyone to stop because of:
+2026-06-30 21:48:22.823 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error looking up row in database
+ERROR: column "annio" does not exist
+  Position: 8
+
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3103)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3082)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3078)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:89)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "annio" does not exist
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3088)
+	... 6 more
+
+2026-06-30 21:48:22.832 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-06-30 21:48:22.837 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5869, W=5868, U=0, E=0)
+2026-06-30 21:48:22.834 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1214, W=1214, U=0, E=0)
+2026-06-30 21:48:22.833 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1018, W=1018, U=0, E=0)
+2026-06-30 21:48:22.833 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1118, W=1118, U=0, E=0)
+2026-06-30 21:48:22.843 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=4907, W=4906, U=0, E=0)
+2026-06-30 21:48:22.834 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1443, W=1443, U=0, E=0)
+2026-06-30 21:48:22.839 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=915, W=915, U=0, E=0)
+2026-06-30 21:48:22.839 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3313, W=3312, U=0, E=0)
+2026-06-30 21:48:22.832 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1343, W=1343, U=0, E=0)
+2026-06-30 21:48:22.832 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=817, W=817, U=0, E=0)
+2026-06-30 21:48:22.844 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1554, W=1553, U=0, E=0)
+2026-06-30 21:48:22.844 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3106, W=3105, U=0, E=0)
+2026-06-30 21:48:22.837 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3006, W=3005, U=0, E=0)
+2026-06-30 21:48:22.891 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-06-30 21:48:22.925 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation detected one or more steps with errors.
+2026-06-30 21:48:22.925 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-06-30 21:48:22.927 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation is killing the other steps!
+2026-06-30 21:48:22.935 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-06-30 21:48:22.940 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished

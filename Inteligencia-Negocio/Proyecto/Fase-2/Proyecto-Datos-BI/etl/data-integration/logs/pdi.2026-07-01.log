@@ -1,0 +1,1268 @@
+2026-07-01 00:23:20.980 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 00:23:21.747 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 00:23:24.921 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:23:25.005 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 00:23:28.602 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 00:23:28.833 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:23:28.934 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:23:33.007 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:23:33.267 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 00:23:33.275 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error looking up row in database
+ERROR: column "mes" does not exist
+  Position: 19
+
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3103)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3082)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3078)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:89)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "mes" does not exist
+  Position: 19
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at org.pentaho.di.core.database.Database.getLookup(Database.java:3088)
+	... 6 more
+
+2026-07-01 00:23:33.293 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=4850, W=4849, U=0, E=0)
+2026-07-01 00:23:33.293 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3355, W=3355, U=0, E=0)
+2026-07-01 00:23:33.293 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=8175, W=8174, U=0, E=0)
+2026-07-01 00:23:33.304 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3131, W=3131, U=0, E=0)
+2026-07-01 00:23:33.300 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2729, W=2729, U=0, E=0)
+2026-07-01 00:23:33.300 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 00:23:33.294 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2630, W=2630, U=0, E=0)
+2026-07-01 00:23:33.300 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3231, W=3231, U=0, E=0)
+2026-07-01 00:23:33.300 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3455, W=3455, U=0, E=0)
+2026-07-01 00:23:33.302 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2830, W=2829, U=0, E=0)
+2026-07-01 00:23:33.312 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5035, W=5034, U=0, E=0)
+2026-07-01 00:23:33.311 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=8376, W=8375, U=0, E=0)
+2026-07-01 00:23:33.305 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3581, W=3580, U=0, E=0)
+2026-07-01 00:23:33.311 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5299, W=5298, U=0, E=0)
+2026-07-01 00:23:33.351 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 00:23:33.396 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 00:23:33.396 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 00:23:33.402 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation is killing the other steps!
+2026-07-01 00:23:33.416 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 00:23:33.422 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 00:32:06.684 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 00:32:07.261 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 00:32:09.410 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:32:09.478 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 00:32:12.483 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 00:32:12.723 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:12.892 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:17.101 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:17.953 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.002 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.087 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.211 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.216 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.537 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.554 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.556 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.556 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.589 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.566 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:18.556 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:26.363 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:55.123 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=14976, O=14976, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:32:55.158 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 00:32:55.425 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:32:55.428 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 00:32:55.651 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 00:32:55.656 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 00:32:55.658 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 00:32:55.676 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 00:32:55.708 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 00:32:55.709 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:32:56.011 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 00:32:56.025 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:32:56.022 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:32:56.022 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:32:56.211 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Unexpected error
+2026-07-01 00:32:56.214 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+Field [descrip_producto] is required and couldn't be found!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:254)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+
+2026-07-01 00:32:56.219 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 00:32:56.223 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 00:32:56.239 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 00:32:56.239 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 00:32:56.244 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 00:32:56.258 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 00:32:56.260 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 00:32:56.265 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 00:53:36.129 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 00:53:36.673 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 00:53:38.664 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:53:38.725 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 00:53:42.232 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 00:53:42.479 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:42.590 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:46.397 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:46.960 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.166 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.274 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.288 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.336 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.569 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.571 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.583 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.590 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.595 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.647 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:47.657 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:53:54.642 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:54:22.390 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=14976, O=14976, R=14976, W=14976, U=0, E=0)
+2026-07-01 00:54:22.421 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 00:54:22.663 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:54:22.667 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 00:54:22.870 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 00:54:22.874 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 00:54:22.877 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 00:54:22.883 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 00:54:22.905 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 00:54:22.910 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:54:23.218 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 00:54:23.223 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:54:23.227 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:54:23.230 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 00:54:23.367 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=30, R=30, W=30, U=0, E=0)
+2026-07-01 00:54:23.399 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 00:54:23.489 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:54:23.491 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 00:54:23.581 INFO  <init of Salida Tabla.0 (Thread-67)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 00:54:23.629 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 00:54:23.635 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 00:54:23.636 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 00:54:23.899 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=300, R=300, W=300, U=0, E=0)
+2026-07-01 00:54:23.909 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-07-01 00:54:24.001 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 00:54:24.004 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-07-01 00:54:24.071 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-07-01 00:54:24.077 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-07-01 00:54:24.077 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-07-01 00:54:24.101 ERROR <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Unexpected error
+2026-07-01 00:54:24.104 ERROR <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+Field [nb_descrip] is required and couldn't be found!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:254)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+
+2026-07-01 00:54:24.107 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Errors detected!
+2026-07-01 00:54:24.116 INFO  <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 00:54:24.125 WARN  <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 00:54:24.125 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Errors detected!
+2026-07-01 00:54:24.127 WARN  <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Transformation is killing the other steps!
+2026-07-01 00:54:24.132 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[false])
+2026-07-01 00:54:24.135 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 00:54:24.138 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 00:54:24.141 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 00:54:24.143 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 01:18:41.546 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 01:18:42.120 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 01:18:44.250 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:18:44.320 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 01:18:48.341 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 01:18:48.542 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:48.652 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:52.538 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:53.478 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:53.519 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:53.532 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:53.675 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:53.687 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.039 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.045 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.054 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.060 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.063 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.077 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:18:54.087 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:19:01.539 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:19:30.286 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=14976, O=14976, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:19:30.321 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 01:19:30.634 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:30.638 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 01:19:30.890 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:30.897 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 01:19:30.909 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:30.915 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 01:19:30.940 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 01:19:30.940 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:31.253 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 01:19:31.258 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:31.263 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:31.269 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:31.352 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=30, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:31.370 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 01:19:31.463 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:31.468 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 01:19:31.556 INFO  <init of Salida Tabla.0 (Thread-68)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 01:19:31.620 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:31.630 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 01:19:31.632 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 01:19:31.910 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=300, R=300, W=300, U=0, E=0)
+2026-07-01 01:19:31.921 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-07-01 01:19:32.032 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:32.036 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-07-01 01:19:32.111 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:32.120 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-07-01 01:19:32.128 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-07-01 01:19:32.164 INFO  <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=6, R=6, W=6, U=0, E=0)
+2026-07-01 01:19:32.175 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ELT dim_contrato]
+2026-07-01 01:19:32.288 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:32.298 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Dispatching started for transformation [Transformacion_ContratoLF]
+2026-07-01 01:19:32.393 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:32.405 INFO  <Transformacion_ContratoLF - Add sequence sk_dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-07-01 01:19:32.406 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-07-01 01:19:33.282 INFO  <Transformacion_ContratoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=1000, R=1000, W=1000, U=0, E=0)
+2026-07-01 01:19:33.290 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_estado_contrato]
+2026-07-01 01:19:33.488 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:33.494 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Dispatching started for transformation [Transformacion Estado ContratoLF]
+2026-07-01 01:19:33.647 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:33.657 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-07-01 01:19:33.649 INFO  <Transformacion Estado ContratoLF - Seleccionar Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-07-01 01:19:33.785 INFO  <Transformacion Estado ContratoLF - Agrupar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=3, U=0, E=0)
+2026-07-01 01:19:33.789 INFO  <Transformacion Estado ContratoLF - Add sequence cod_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-07-01 01:19:33.792 INFO  <Transformacion Estado ContratoLF - Add sequence sk_dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-07-01 01:19:33.840 INFO  <Transformacion Estado ContratoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-07-01 01:19:33.845 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_sucursal]
+2026-07-01 01:19:33.976 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:33.979 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Dispatching started for transformation [Transformacion SucursalLF]
+2026-07-01 01:19:34.097 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:34.107 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 01:19:34.099 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:34.111 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:34.120 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 01:19:34.119 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 01:19:34.413 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-07-01 01:19:34.714 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais-Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-07-01 01:19:34.718 INFO  <Transformacion SucursalLF - Add sequence sk_dim_sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:34.807 INFO  <Transformacion SucursalLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=30, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:34.814 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_siniestro]
+2026-07-01 01:19:34.911 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:34.914 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Dispatching started for transformation [Transformacion siniestroLF]
+2026-07-01 01:19:34.975 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:34.980 INFO  <Transformacion siniestroLF - Add sequence sk_dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-07-01 01:19:34.981 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-07-01 01:19:35.048 INFO  <Transformacion siniestroLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=20, R=20, W=20, U=0, E=0)
+2026-07-01 01:19:35.054 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_metas]
+2026-07-01 01:19:35.749 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:35.753 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Dispatching started for transformation [LFTransformation_fact_metas]
+2026-07-01 01:19:36.122 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:36.127 INFO  <LFTransformation_fact_metas - Sort cod_prod> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 01:19:36.135 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 01:19:36.268 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:36.270 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:36.278 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 01:19:36.292 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 01:19:40.952 INFO  <LFTransformation_fact_metas - Microsoft Excel metas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=390, O=0, R=0, W=390, U=0, E=0)
+2026-07-01 01:19:40.958 INFO  <LFTransformation_fact_metas - Sort cod_prod 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-07-01 01:19:41.262 INFO  <LFTransformation_fact_metas - Merge join> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=420, W=0, U=0, E=0)
+2026-07-01 01:19:41.569 INFO  <LFTransformation_fact_metas - Sort fecha_completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:19:41.720 INFO  <LFTransformation_fact_metas - Merge join 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=0, U=0, E=0)
+2026-07-01 01:19:41.940 INFO  <LFTransformation_fact_metas - Sort fecha_completa2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 01:19:42.092 INFO  <LFTransformation_fact_metas - Merge join 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=0, U=0, E=0)
+2026-07-01 01:19:42.101 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_reg_contrato]
+2026-07-01 01:19:42.377 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 01:19:42.379 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Dispatching started for transformation [Transformacion FACT_Registro_Contrato]
+2026-07-01 01:19:42.531 INFO  <init of Salida Tabla.0 (Thread-178)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 01:19:42.646 ERROR <init of Insert / update.0 (Thread-176)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  An error occurred during initialization, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 01:19:42.648 ERROR <init of Insert / update.0 (Thread-176)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Error initializing step [Insert / update]
+2026-07-01 01:19:42.653 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Step [Insert / update.0] failed to initialize!
+2026-07-01 01:19:42.656 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.662 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.667 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.672 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.678 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.682 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 01:19:42.689 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-07-01 01:19:42.694 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-07-01 01:19:42.702 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_reg_contrato] (result=[false])
+2026-07-01 01:19:42.706 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_metas] (result=[false])
+2026-07-01 01:19:42.711 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_siniestro] (result=[false])
+2026-07-01 01:19:42.720 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_sucursal] (result=[false])
+2026-07-01 01:19:42.729 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_estado_contrato] (result=[false])
+2026-07-01 01:19:42.732 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ELT dim_contrato] (result=[false])
+2026-07-01 01:19:42.738 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[false])
+2026-07-01 01:19:42.744 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 01:19:42.748 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 01:19:42.751 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 01:19:42.755 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:13:02.664 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:13:03.510 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 05:13:06.587 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:13:06.696 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 05:13:13.989 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:13:14.187 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:14.293 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:19.501 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.262 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.301 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.419 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.427 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.459 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.912 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.928 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.937 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.943 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.948 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:20.991 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:21.003 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:13:31.774 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:14:07.708 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=14976, O=14976, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:14:07.747 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 05:14:08.200 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:08.204 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 05:14:08.456 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:08.462 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 05:14:08.475 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:08.486 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:14:08.498 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 05:14:08.498 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:08.809 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 05:14:08.814 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:08.822 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:08.818 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:08.922 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=30, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:08.938 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 05:14:09.044 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:09.049 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 05:14:09.138 INFO  <init of Salida Tabla.0 (Thread-67)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 05:14:09.190 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:09.190 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 05:14:09.198 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 05:14:09.545 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=300, R=300, W=300, U=0, E=0)
+2026-07-01 05:14:09.556 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_eval_servicio]
+2026-07-01 05:14:09.668 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:09.673 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Dispatching started for transformation [Transformacion Evaluacion ServicioLF]
+2026-07-01 05:14:09.753 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:09.759 INFO  <Transformacion Evaluacion ServicioLF - Entrada Tabla Evaluacion_Servicio> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+2026-07-01 05:14:09.762 INFO  <Transformacion Evaluacion ServicioLF - Add sequence sk_eval_serv> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-07-01 05:14:09.807 INFO  <Transformacion Evaluacion ServicioLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Evaluacion_Servicio.ktr]  Finished processing (I=6, O=6, R=6, W=6, U=0, E=0)
+2026-07-01 05:14:09.817 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ELT dim_contrato]
+2026-07-01 05:14:09.987 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:10.002 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Dispatching started for transformation [Transformacion_ContratoLF]
+2026-07-01 05:14:10.120 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:10.125 INFO  <Transformacion_ContratoLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-07-01 05:14:10.130 INFO  <Transformacion_ContratoLF - Add sequence sk_dim_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-07-01 05:14:10.916 INFO  <Transformacion_ContratoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Contrato.ktr]  Finished processing (I=1000, O=1000, R=1000, W=1000, U=0, E=0)
+2026-07-01 05:14:10.924 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_estado_contrato]
+2026-07-01 05:14:11.112 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:11.116 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Dispatching started for transformation [Transformacion Estado ContratoLF]
+2026-07-01 05:14:11.258 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:11.262 INFO  <Transformacion Estado ContratoLF - Entrada Tabla Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2026-07-01 05:14:11.263 INFO  <Transformacion Estado ContratoLF - Seleccionar Estado Contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=1000, U=0, E=0)
+2026-07-01 05:14:11.279 INFO  <Transformacion Estado ContratoLF - Add sequence cod_estado> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-07-01 05:14:11.276 INFO  <Transformacion Estado ContratoLF - Agrupar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=1000, W=3, U=0, E=0)
+2026-07-01 05:14:11.301 INFO  <Transformacion Estado ContratoLF - Add sequence sk_dim_estado_contrato> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-07-01 05:14:11.648 INFO  <Transformacion Estado ContratoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Estado_Contrato.ktr]  Finished processing (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-07-01 05:14:11.654 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_sucursal]
+2026-07-01 05:14:11.826 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:11.829 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Dispatching started for transformation [Transformacion SucursalLF]
+2026-07-01 05:14:11.936 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:11.943 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:11.943 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:11.943 INFO  <Transformacion SucursalLF - Entrada Tabla Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:14:11.958 INFO  <Transformacion SucursalLF - Entrada Tabla Sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:14:11.959 INFO  <Transformacion SucursalLF - Entrada Tabla Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:14:12.252 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-07-01 05:14:12.553 INFO  <Transformacion SucursalLF - Unión Sucursal-Pais-Ciudad> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=60, W=30, U=0, E=0)
+2026-07-01 05:14:12.556 INFO  <Transformacion SucursalLF - Add sequence sk_dim_sucursal> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:12.598 INFO  <Transformacion SucursalLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Sucursal.ktr]  Finished processing (I=30, O=30, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:12.606 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_siniestro]
+2026-07-01 05:14:12.709 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:12.713 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Dispatching started for transformation [Transformacion siniestroLF]
+2026-07-01 05:14:12.790 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:12.796 INFO  <Transformacion siniestroLF - Add sequence sk_dim_siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+2026-07-01 05:14:12.796 INFO  <Transformacion siniestroLF - Entrada Tabla Siniestro> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2026-07-01 05:14:12.868 INFO  <Transformacion siniestroLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Siniestro.ktr]  Finished processing (I=20, O=20, R=20, W=20, U=0, E=0)
+2026-07-01 05:14:12.875 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_metas]
+2026-07-01 05:14:13.179 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:13.182 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Dispatching started for transformation [LFTransformation_fact_metas]
+2026-07-01 05:14:13.886 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:13.903 INFO  <LFTransformation_fact_metas - Sort cod_prod> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:14:13.913 INFO  <LFTransformation_fact_metas - extraer producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:14:14.110 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:14.122 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:14.123 INFO  <LFTransformation_fact_metas - extraer dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:14:14.139 INFO  <LFTransformation_fact_metas - extraer dim_tiempo2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=14976, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:14:22.223 INFO  <LFTransformation_fact_metas - Microsoft Excel metas> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=390, O=0, R=0, W=390, U=0, E=0)
+2026-07-01 05:14:22.233 INFO  <LFTransformation_fact_metas - Sort cod_prod 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=390, W=390, U=0, E=0)
+2026-07-01 05:14:22.535 INFO  <LFTransformation_fact_metas - Merge join> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=420, W=0, U=0, E=0)
+2026-07-01 05:14:23.056 INFO  <LFTransformation_fact_metas - Sort fecha_completa> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:14:23.208 INFO  <LFTransformation_fact_metas - Merge join 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=0, U=0, E=0)
+2026-07-01 05:14:23.390 INFO  <LFTransformation_fact_metas - Sort fecha_completa2> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:14:23.544 INFO  <LFTransformation_fact_metas - Merge join 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Metas.ktr]  Finished processing (I=0, O=0, R=14976, W=0, U=0, E=0)
+2026-07-01 05:14:23.555 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL_fact_reg_contrato]
+2026-07-01 05:14:23.918 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:14:23.921 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Dispatching started for transformation [Transformacion FACT_Registro_Contrato]
+2026-07-01 05:14:24.088 INFO  <init of Salida Tabla.0 (Thread-177)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 05:14:24.214 ERROR <init of Insert / update.0 (Thread-175)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  An error occurred during initialization, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 05:14:24.216 ERROR <init of Insert / update.0 (Thread-175)> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Error initializing step [Insert / update]
+2026-07-01 05:14:24.219 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Step [Insert / update.0] failed to initialize!
+2026-07-01 05:14:24.222 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.230 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.246 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.249 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.255 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.260 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLfact_Registro_Contrato.ktr]  Finished reading query, closing connection
+2026-07-01 05:14:24.267 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-07-01 05:14:24.282 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-07-01 05:14:24.294 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_reg_contrato] (result=[false])
+2026-07-01 05:14:24.298 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL_fact_metas] (result=[false])
+2026-07-01 05:14:24.322 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_siniestro] (result=[false])
+2026-07-01 05:14:24.325 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_sucursal] (result=[false])
+2026-07-01 05:14:24.327 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_estado_contrato] (result=[false])
+2026-07-01 05:14:24.329 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ELT dim_contrato] (result=[false])
+2026-07-01 05:14:24.333 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_eval_servicio] (result=[false])
+2026-07-01 05:14:24.336 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 05:14:24.340 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 05:14:24.345 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 05:14:24.347 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:20:20.405 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:20:21.027 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 05:20:23.195 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:20:23.268 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 05:20:27.029 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:20:27.295 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:20:27.423 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:20:32.333 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:20:32.968 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 05:20:32.978 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_tiempo"
+  Detail: Key (sk_dim_tiempo)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_tiempo"
+  Detail: Key (sk_dim_tiempo)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 05:20:33.021 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:20:33.042 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3643, W=3643, U=0, E=0)
+2026-07-01 05:20:33.047 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=12622, W=12621, U=0, E=0)
+2026-07-01 05:20:33.026 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3444, W=3444, U=0, E=0)
+2026-07-01 05:20:33.062 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=9200, W=9199, U=0, E=0)
+2026-07-01 05:20:33.026 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=7461, W=7460, U=0, E=0)
+2026-07-01 05:20:33.061 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2959, W=2959, U=0, E=0)
+2026-07-01 05:20:33.025 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3344, W=3344, U=0, E=0)
+2026-07-01 05:20:33.057 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3544, W=3544, U=0, E=0)
+2026-07-01 05:20:33.044 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3227, W=3226, U=0, E=0)
+2026-07-01 05:20:33.043 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3059, W=3058, U=0, E=0)
+2026-07-01 05:20:33.044 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3736, W=3735, U=0, E=0)
+2026-07-01 05:20:33.047 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=11311, W=11310, U=0, E=0)
+2026-07-01 05:20:33.026 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=7293, W=7292, U=0, E=0)
+2026-07-01 05:20:33.111 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 05:20:33.142 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:20:33.142 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 05:20:33.150 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation is killing the other steps!
+2026-07-01 05:20:33.152 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 05:20:33.155 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:28:08.218 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:28:08.957 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 05:28:11.473 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:28:11.555 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 05:28:15.438 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:28:15.680 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:28:15.840 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:28:20.379 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:28:20.682 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 05:28:20.706 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: null value in column "sk_dim_tiempo" of relation "dim_tiempo" violates not-null constraint
+  Detail: Failing row contains (null, 2000, 1, 1, 1, 7, 0, DOMINGO, D, ENERO, E, 1, 1, null).
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "sk_dim_tiempo" of relation "dim_tiempo" violates not-null constraint
+  Detail: Failing row contains (null, 2000, 1, 1, 1, 7, 0, DOMINGO, D, ENERO, E, 1, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 05:28:20.723 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:28:20.739 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5832, W=5831, U=0, E=0)
+2026-07-01 05:28:20.752 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3016, W=3016, U=0, E=0)
+2026-07-01 05:28:20.737 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5606, W=5606, U=0, E=0)
+2026-07-01 05:28:20.750 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2814, W=2814, U=0, E=0)
+2026-07-01 05:28:20.744 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2550, W=2549, U=0, E=0)
+2026-07-01 05:28:20.745 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2915, W=2915, U=0, E=0)
+2026-07-01 05:28:20.743 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5110, W=5109, U=0, E=0)
+2026-07-01 05:28:20.742 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2309, W=2309, U=0, E=0)
+2026-07-01 05:28:20.744 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=8563, W=8562, U=0, E=0)
+2026-07-01 05:28:20.750 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2650, W=2650, U=0, E=0)
+2026-07-01 05:28:20.756 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2444, W=2444, U=0, E=0)
+2026-07-01 05:28:20.741 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3115, W=3114, U=0, E=0)
+2026-07-01 05:28:20.755 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=8462, W=8462, U=0, E=0)
+2026-07-01 05:28:20.818 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 05:28:20.874 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:28:20.875 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 05:28:20.881 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation is killing the other steps!
+2026-07-01 05:28:20.885 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 05:28:20.896 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:33:20.258 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:33:20.813 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_tiempo]
+2026-07-01 05:33:22.793 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:33:22.862 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Dispatching started for transformation [Transformacion Dim_Tiempo]
+2026-07-01 05:33:25.695 INFO  <Transformacion Dim_Tiempo - Generate rows> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=0, W=14976, U=0, E=0)
+2026-07-01 05:33:25.849 INFO  <Transformacion Dim_Tiempo - suma_dias> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:33:25.949 INFO  <Transformacion Dim_Tiempo - Calculator> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:33:29.764 INFO  <Transformacion Dim_Tiempo - Select values> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=14976, W=14976, U=0, E=0)
+2026-07-01 05:33:30.183 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 05:33:30.188 ERROR <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_tiempo"
+  Detail: Key (sk_dim_tiempo)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_tiempo"
+  Detail: Key (sk_dim_tiempo)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 05:33:30.192 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:33:30.202 INFO  <Transformacion Dim_Tiempo - Añadir secuencia sk_dim_tiempo> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=2890, W=2890, U=0, E=0)
+2026-07-01 05:33:30.212 INFO  <Transformacion Dim_Tiempo - Extraccion de mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=9084, W=9083, U=0, E=0)
+2026-07-01 05:33:30.211 INFO  <Transformacion Dim_Tiempo - Formula desc_trimestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3107, W=3107, U=0, E=0)
+2026-07-01 05:33:30.207 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3278, W=3278, U=0, E=0)
+2026-07-01 05:33:30.203 INFO  <Transformacion Dim_Tiempo - Extraccion dia mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5830, W=5829, U=0, E=0)
+2026-07-01 05:33:30.201 INFO  <Transformacion Dim_Tiempo - Mapeo de valores Des_dia_semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3578, W=3578, U=0, E=0)
+2026-07-01 05:33:30.201 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_dia_semana_corta> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3478, W=3478, U=0, E=0)
+2026-07-01 05:33:30.200 INFO  <Transformacion Dim_Tiempo - Extraccion dia año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=6948, W=6947, U=0, E=0)
+2026-07-01 05:33:30.200 INFO  <Transformacion Dim_Tiempo - Extraccion semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3675, W=3674, U=0, E=0)
+2026-07-01 05:33:30.202 INFO  <Transformacion Dim_Tiempo - Mapeo de valores desc_mes> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3378, W=3378, U=0, E=0)
+2026-07-01 05:33:30.203 INFO  <Transformacion Dim_Tiempo - Extraccion de año> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=9189, W=9188, U=0, E=0)
+2026-07-01 05:33:30.200 INFO  <Transformacion Dim_Tiempo - Extraccion dia semana> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=5707, W=5707, U=0, E=0)
+2026-07-01 05:33:30.198 INFO  <Transformacion Dim_Tiempo - Formula desc_semestre> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=0, O=0, R=3007, W=3006, U=0, E=0)
+2026-07-01 05:33:30.263 INFO  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 05:33:30.300 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Errors detected!
+2026-07-01 05:33:30.302 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 05:33:30.309 WARN  <Transformacion Dim_Tiempo - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Tiempo.ktr]  Transformation is killing the other steps!
+2026-07-01 05:33:30.310 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_tiempo] (result=[false])
+2026-07-01 05:33:30.313 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:37:49.119 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:37:49.730 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 05:37:51.718 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:37:51.783 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 05:37:54.634 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:37:54.643 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:37:54.663 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:37:54.663 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 05:37:54.677 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 05:37:54.679 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:37:54.986 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 05:37:55.000 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:37:55.013 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:37:55.016 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:37:55.160 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 05:37:55.163 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 05:37:55.167 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 05:37:55.169 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 05:37:55.199 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 05:37:55.199 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 05:37:55.201 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 05:37:55.207 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 05:37:55.209 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 05:43:22.509 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 05:43:23.057 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 05:43:24.974 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 05:43:25.064 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 05:43:27.977 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:43:27.987 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 05:43:28.013 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 05:43:28.014 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 05:43:28.014 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 05:43:28.030 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:43:28.347 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 05:43:28.353 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:43:28.360 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:43:28.370 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 05:43:28.541 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 05:43:28.545 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 05:43:28.549 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 05:43:28.553 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 05:43:28.582 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 05:43:28.582 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 05:43:28.585 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 05:43:28.595 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 05:43:28.597 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:03:30.870 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:03:31.429 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:03:33.415 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:03:33.489 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:03:36.819 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:03:36.830 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:03:36.862 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:03:36.870 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:03:36.870 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:03:36.870 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:03:37.176 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:03:37.182 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:03:37.188 ERROR <Transformacion ProductoLF - String operations> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Unexpected error
+2026-07-01 06:03:37.193 ERROR <Transformacion ProductoLF - String operations> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+Input field [cod_producto] is not a STRING! Only string are allowed in input field.
+
+	at org.pentaho.di.trans.steps.stringoperations.StringOperations.processRow(StringOperations.java:246)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+
+2026-07-01 06:03:37.194 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:03:37.199 INFO  <Transformacion ProductoLF - String operations> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:03:37.207 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2026-07-01 06:03:37.197 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:03:37.219 WARN  <Transformacion ProductoLF - String operations> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:03:37.225 WARN  <Transformacion ProductoLF - String operations> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 06:03:37.469 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:03:37.474 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:03:37.477 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:10:33.403 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:10:34.100 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:10:36.124 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:10:36.192 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:10:39.511 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:10:39.518 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:10:39.533 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:10:39.534 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:10:39.553 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:10:39.557 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:10:39.861 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:10:39.878 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:10:39.888 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:10:39.893 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:10:39.897 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:10:39.928 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 06:10:40.002 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:10:40.006 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 06:10:40.152 INFO  <init of Salida Tabla.0 (Thread-32)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 06:10:40.221 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 06:10:40.223 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 06:10:40.230 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 06:10:40.442 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 06:10:40.445 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 06:10:40.449 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:10:40.453 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:10:40.469 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:10:40.469 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:10:40.473 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation is killing the other steps!
+2026-07-01 06:10:40.476 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 06:10:40.478 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:10:40.482 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:15:12.722 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:15:13.297 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:15:15.543 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:15:15.612 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:15:18.782 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:15:18.792 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:15:18.805 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:15:18.805 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:15:18.838 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:15:18.845 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:15:19.149 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:15:19.155 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:15:19.161 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:15:19.169 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:15:19.173 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:15:19.205 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 06:15:19.336 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:15:19.339 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 06:15:19.467 INFO  <init of Salida Tabla.0 (Thread-33)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 06:15:19.514 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 06:15:19.521 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 06:15:19.533 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 06:15:19.539 INFO  <Transformacion ClienteLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 06:15:19.682 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 06:15:19.685 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 06:15:19.689 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:15:19.693 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:15:19.704 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:15:19.705 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:15:19.707 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation is killing the other steps!
+2026-07-01 06:15:19.713 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 06:15:19.716 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:15:19.718 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:22:35.730 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:22:36.299 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:22:38.454 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:22:38.522 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:22:41.498 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:22:41.506 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:22:41.515 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:22:41.515 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:22:41.534 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:22:41.538 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:22:41.844 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:22:41.862 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:22:41.871 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:22:41.879 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:22:41.883 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:22:41.914 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_cliente]
+2026-07-01 06:22:42.060 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:22:42.064 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Dispatching started for transformation [Transformacion ClienteLF]
+2026-07-01 06:22:42.176 INFO  <init of Salida Tabla.0 (Thread-33)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 06:22:42.241 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished reading query, closing connection
+2026-07-01 06:22:42.252 INFO  <Transformacion ClienteLF - Entrada Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=300, O=0, R=0, W=300, U=0, E=0)
+2026-07-01 06:22:42.264 INFO  <Transformacion ClienteLF - Add sequence Sk_dim_cliente> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 06:22:42.274 INFO  <Transformacion ClienteLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=0, O=0, R=300, W=300, U=0, E=0)
+2026-07-01 06:22:42.413 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 06:22:42.416 ERROR <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_cliente"
+  Detail: Key (sk_dim_cliente)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 06:22:42.420 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:22:42.422 INFO  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:22:42.435 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:22:42.435 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Errors detected!
+2026-07-01 06:22:42.437 WARN  <Transformacion ClienteLF - SalidaActualizada> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Cliente.ktr]  Transformation is killing the other steps!
+2026-07-01 06:22:42.442 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_cliente] (result=[false])
+2026-07-01 06:22:42.444 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:22:42.446 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:25:21.265 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:25:21.837 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:25:23.822 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:25:23.893 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:25:26.983 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:25:26.989 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:25:27.018 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:25:27.022 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:25:27.020 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:25:27.031 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:25:27.337 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:25:27.355 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:25:27.361 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:25:27.368 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:25:27.371 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:25:27.559 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 06:25:27.562 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 06:25:27.565 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:25:27.568 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:25:27.601 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:25:27.601 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:25:27.604 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 06:25:27.611 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:25:27.613 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:43:51.795 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:43:52.361 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:43:54.437 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:43:54.504 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:43:58.029 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:43:58.042 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:43:58.071 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:43:58.076 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:43:58.073 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:43:58.073 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:43:58.392 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:43:58.410 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:43:58.418 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:43:58.423 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:43:58.432 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:43:58.596 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 06:43:58.600 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 06:43:58.603 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:43:58.606 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:43:58.633 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:43:58.633 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:43:58.638 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 06:43:58.644 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:43:58.647 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 06:53:49.347 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 06:53:50.012 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 06:53:51.960 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 06:53:52.019 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 06:53:54.757 INFO  <init of Salida Tabla.0 (Thread-19)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 06:53:55.010 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:53:55.013 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 06:53:55.028 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 06:53:55.028 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 06:53:55.049 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 06:53:55.055 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:53:55.360 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 06:53:55.368 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:53:55.377 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:53:55.384 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:53:55.390 INFO  <Transformacion ProductoLF - Selecciona/Renombra valores> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 06:53:55.532 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:53:55.537 INFO  <Transformacion ProductoLF - Actualizar> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=0, U=0, E=30)
+2026-07-01 06:53:55.539 ERROR <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Because of an error, this step can't continue: 
+2026-07-01 06:53:55.544 ERROR <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleException: 
+Error inserting row into table [dim_producto] with values: [2], [Personales], [1], [Poliza1_Vida], [vida con cobertura a], [2], [2], [1]
+
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:384)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.processRow(TableOutput.java:125)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:262)
+	... 3 more
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 4 more
+
+2026-07-01 06:53:55.553 INFO  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 06:53:55.578 WARN  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 06:53:55.579 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 06:53:55.580 WARN  <Transformacion ProductoLF - Salida Tabla> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 06:53:55.587 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 06:53:55.589 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 07:05:50.789 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 07:05:51.363 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 07:05:53.351 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 07:05:53.424 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 07:05:56.473 INFO  <init of Salida Tabla.0 (Thread-18)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 07:05:56.821 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:05:56.829 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:05:56.842 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 07:05:56.842 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 07:05:56.868 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 07:05:56.872 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:05:57.180 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 07:05:57.186 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:05:57.193 INFO  <Transformacion ProductoLF - Add sequence sk_dim_producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:05:57.198 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:05:57.359 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 07:05:57.362 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pk_dim_producto"
+  Detail: Key (sk_dim_producto)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 07:05:57.365 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 07:05:57.368 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 07:05:57.398 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 07:05:57.398 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 07:05:57.403 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 07:05:57.405 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 07:05:57.408 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 07:20:37.675 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 07:20:38.234 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 07:20:40.208 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 07:20:40.269 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 07:20:41.938 ERROR <init of Entrada Tabla Tipo Producto.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 07:20:41.941 ERROR <init of Entrada Tabla Producto.0 (Thread-11)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 07:20:41.944 ERROR <init of Entrada Tabla Tipo Producto.0 (Thread-9)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error initializing step [Entrada Tabla Tipo Producto]
+2026-07-01 07:20:41.943 ERROR <init of Salida Tabla.0 (Thread-18)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  An error occurred intialising this step: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 07:20:41.951 ERROR <init of Entrada Tabla Producto.0 (Thread-11)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error initializing step [Entrada Tabla Producto]
+2026-07-01 07:20:41.951 ERROR <init of Salida Tabla.0 (Thread-18)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error initializing step [Salida Tabla]
+2026-07-01 07:20:41.970 ERROR <init of Insert / update.0 (Thread-17)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  An error occurred during initialization, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-07-01 07:20:41.973 ERROR <init of Insert / update.0 (Thread-17)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error initializing step [Insert / update]
+2026-07-01 07:20:41.976 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Step [Entrada Tabla Tipo Producto.0] failed to initialize!
+2026-07-01 07:20:41.978 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Step [Entrada Tabla Producto.0] failed to initialize!
+2026-07-01 07:20:41.981 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Step [Insert / update.0] failed to initialize!
+2026-07-01 07:20:41.983 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Step [Salida Tabla.0] failed to initialize!
+2026-07-01 07:20:41.985 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:20:41.987 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:20:41.990 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Unexpected error rolling back the database connection.
+2026-07-01 07:20:41.992 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Unable to get database metadata from this database connection
+
+Error connecting to database [proyecto_bi]
+
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3121)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:912)
+	at org.pentaho.di.core.database.Database.rollback(Database.java:904)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:625)
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1272)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+Caused by: org.pentaho.di.core.exception.KettleDatabaseException: 
+Error connecting to database [proyecto_bi]
+
+	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3115)
+	... 10 more
+
+2026-07-01 07:20:41.999 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  Unable to prepare for execution of the transformation
+2026-07-01 07:20:42.001 ERROR <Thread-8> [/jobs/Job_dim_fact.kjb]  org.pentaho.di.core.exception.KettleException: 
+We failed to initialize at least one step.  Execution can not begin!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1301)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:763)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1189)
+	at org.pentaho.di.job.Job.execute(Job.java:707)
+	at org.pentaho.di.job.Job.execute(Job.java:848)
+	at org.pentaho.di.job.Job.execute(Job.java:517)
+	at org.pentaho.di.job.Job.run(Job.java:395)
+
+2026-07-01 07:20:42.007 INFO  <Thread-8> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 07:20:42.009 WARN  <Thread-8> [/jobs/Job_dim_fact.kjb]  Job execution finished
+2026-07-01 07:53:56.483 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Start of job execution
+2026-07-01 07:53:57.154 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Starting entry [ETL dim_producto]
+2026-07-01 07:53:59.561 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Using run configuration [Pentaho local]
+2026-07-01 07:53:59.630 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Dispatching started for transformation [Transformacion ProductoLF]
+2026-07-01 07:54:02.843 INFO  <init of Salida Tabla.0 (Thread-17)> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Connected to database [Docker] (commit=1000)
+2026-07-01 07:54:03.141 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:54:03.144 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished reading query, closing connection
+2026-07-01 07:54:03.159 INFO  <Transformacion ProductoLF - Entrada Tabla Tipo Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=4, O=0, R=0, W=4, U=0, E=0)
+2026-07-01 07:54:03.159 INFO  <Transformacion ProductoLF - Entrada Tabla Producto> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-07-01 07:54:03.185 INFO  <Transformacion ProductoLF - Ordenar filas> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-07-01 07:54:03.189 INFO  <Transformacion ProductoLF - Ordenar filas 2> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:54:03.492 INFO  <Transformacion ProductoLF - Unión por clave> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=34, W=30, U=0, E=0)
+2026-07-01 07:54:03.499 INFO  <Transformacion ProductoLF - Ordenar filas 3> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:54:03.505 INFO  <Transformacion ProductoLF - Strings cut> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-07-01 07:54:03.614 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Error in step, asking everyone to stop because of:
+2026-07-01 07:54:03.618 ERROR <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error inserting/updating row
+ERROR: permission denied for sequence dim_producto_sk_seq
+
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1335)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1259)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1247)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1235)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:114)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:299)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.postgresql.util.PSQLException: ERROR: permission denied for sequence dim_producto_sk_seq
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.pentaho.di.core.database.Database.insertRow(Database.java:1302)
+	... 7 more
+
+2026-07-01 07:54:03.623 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 07:54:03.630 INFO  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Finished processing (I=1, O=0, R=1, W=0, U=0, E=1)
+2026-07-01 07:54:03.661 ERROR <Thread-7> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Errors detected!
+2026-07-01 07:54:03.661 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation detected one or more steps with errors.
+2026-07-01 07:54:03.666 WARN  <Transformacion ProductoLF - Insert / update> [/jobs/Job_dim_fact.kjb  /jobs/ETLdim_Producto.ktr]  Transformation is killing the other steps!
+2026-07-01 07:54:03.669 INFO  <Thread-7> [/jobs/Job_dim_fact.kjb]  Finished job entry [ETL dim_producto] (result=[false])
+2026-07-01 07:54:03.672 WARN  <Thread-7> [/jobs/Job_dim_fact.kjb]  Job execution finished
