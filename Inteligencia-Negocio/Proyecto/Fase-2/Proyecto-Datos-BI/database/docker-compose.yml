@@ -1,0 +1,37 @@
+services:
+  # Servicio 1: El motor de Base de Datos (PostgreSQL)
+  db_seguros:
+    image: postgres:15
+    container_name: postgres_seguros
+    environment:
+      POSTGRES_USER: usuario_ucv
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: proyecto_bi
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./:/docker-entrypoint-initdb.d/
+    restart: always
+
+  # Servicio 2: Pentaho con semáforo binario
+  pentaho_etl:
+    build: .
+    container_name: pentaho_extractor
+    depends_on:
+      - db_seguros
+    volumes:
+      - ../etl:/jobs
+      - ../etl/data-integration:/opt/data-integration
+      - ./:/bd_status
+    environment:
+      - RUTA_ETL=/jobs
+    # Ciclo reactivo al valor '1' y sobreescritura a '0'
+    command: >
+      sh -c "echo 'Monitoreando semáforo... Esperando señal [1] de la Base de Datos...' && 
+             while [ \"\$(cat /bd_status/semaforo.txt 2>/dev/null | tr -d '[:space:]')\" != \"1\" ]; do 
+               sleep 2; 
+             done; 
+             echo '¡Señal [1] detectada! Base de datos cargada por completo.' && 
+             echo '0' > /bd_status/semaforo.txt && 
+             echo 'Semáforo reseteado a [0]. Iniciando Pentaho Kitchen...' && 
+             /opt/data-integration/kitchen.sh -file=/jobs/Job_dim_fact.kjb -level=Basic"
