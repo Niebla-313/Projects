@@ -26,12 +26,17 @@ El proyecto está organizado de la siguiente manera para facilitar su despliegue
 * **Orquestación y ETL:** Pentaho Data Integration
 * **Data Warehouse:** PostgreSQL
 * **Visualización:** Power BI Desktop
-
-  ## 📦 Cómo Ejecutar el Proyecto :
+---
+### 📋 Prerrequisitos
+Antes de comenzar, asegúrate de tener instalado en tu equipo:
+*   [Docker Desktop](https://www.docker.com/products/docker-desktop/) activo y corriendo.
+*   [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (para la visualización de tableros).
+---
+## 📦 Cómo Ejecutar el Proyecto :
 1. Descargar la carpeta `Proyecto-Datos-BI`.
-    <p align="center">
-      <a href="https://downgit.github.io/#/home?url=https://github.com/Niebla-313/Projects/tree/main/Inteligencia-Negocio/Proyecto/Fase-2/Proyecto-Datos-BI" target="_blank">
-      <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
-    </a>
-  </p>
+<p align="center">
+  <a href="https://github.com/Niebla-313/Projects/releases/download/v1.0.0/Proyecto-Datos-BI.rar" target="_blank">
+    <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
+  </a>
+</p>
  2. Ejecutar script: `python taller4_27321522.py`
