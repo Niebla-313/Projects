@@ -4,6 +4,7 @@ Solución completa y **100% reproducible** de **Business Intelligence (BI)**. In
 
 ---
 # Fase 1:
+
 En esta carpeta se encuentra el enunciado del proyecto, asi como el analisis teorico del mismo.
 ---
 # Fase 2:
