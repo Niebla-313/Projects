@@ -42,5 +42,13 @@ Antes de comenzar, asegúrate de tener instalado en tu equipo:
  2. Una vez descargado se debe descomprimir la carpeta.
  
  3. Con la carpeta descomprimida se habre una consola y se navega hasta la carpeta `dabatase`.
- 4. 
- 5. En la carpeta y con el Docker Desktop abierto vamos a ejecutar el comando `docker-compose up -d` y se puede visualizar como se comienza a crear en Docker las Bases de Datos y como los ETL comienzan a hacer las cargas al Modelo Dimensional (DW).
+    
+ 4. En la carpeta y con el Docker Desktop abierto vamos a ejecutar el comando `docker-compose up -d` y se puede visualizar como se comienza a crear en Docker las Bases de Datos y como los ETL comienzan a hacer las cargas al Modelo Dimensional (DW).
+
+ 5. Para visualizar las graficas solo debes abrir el archivo de nombre `informe` que se encuentra en la carpeta `dashboard` el mismo ya posee las conexiones con la BD de Docker. 
+---
+<p align="center">
+  <a href="https://github.com/Niebla-313/Projects">
+    <img src="https://img.shields.io/badge/Volver%20al%20Portafolio%20Principal-00599C?style=for-the-badge&logo=github&logoColor=white" alt="Volver al inicio">
+  </a>
+</p>
