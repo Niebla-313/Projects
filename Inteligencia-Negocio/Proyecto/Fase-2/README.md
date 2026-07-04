@@ -39,4 +39,8 @@ Antes de comenzar, asegúrate de tener instalado en tu equipo:
     <img src="https://img.shields.io/badge/Descargar%20esta%20carpeta-🚀-00599C?style=for-the-badge" alt="Descargar carpeta">
   </a>
 </p>
- 2. Ejecutar script: `python taller4_27321522.py`
+ 2. Una vez descargado se debe descomprimir la carpeta.
+ 
+ 3. Con la carpeta descomprimida se habre una consola y se navega hasta la carpeta `dabatase`.
+ 4. 
+ 5. En la carpeta y con el Docker Desktop abierto vamos a ejecutar el comando `docker-compose up -d` y se puede visualizar como se comienza a crear en Docker las Bases de Datos y como los ETL comienzan a hacer las cargas al Modelo Dimensional (DW).
