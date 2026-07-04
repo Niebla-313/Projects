@@ -31,9 +31,9 @@ Me apasiona transformar datos en soluciones visuales, optimizar procesos ETL y r
 
 Aquí encontrarás una selección de los proyectos más significativos que he desarrollado durante la carrera:
 
-### 🔹 1. Compresión de Imágenes mediante SVD
-* **Descripción:** Aplicación de álgebra lineal numérica (Descomposición en Valores Singulares) para comprimir imágenes reduciendo el tamaño del archivo mientras se preserva la calidad visual. Desarrollado con Python (NumPy, SciPy).
-* **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Compresion-Imagenes-SVD)
+### 🔹 1. Sistema de Business Intelligence y Procesos ETL
+* **Descripción:** Diseño e implementación de un flujo de datos de extremo a extremo (End-to-End). Incluye el modelado de la base de datos relacional, la creación de procesos ETL para la extracción y transformación de datos, y el desarrollo de un dashboard interactivo para el análisis de métricas clave y toma de decisiones.
+* **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/%20Inteligencia-Negocio/Proyecto)
 
 ### 🔹 2. Simulación de Distribución de Calor en 2D
 * **Descripción:** Proyecto de computación científica enfocado en resolver ecuaciones diferenciales parciales para modelar cómo se propaga el calor en una superficie bidimensional a lo largo del tiempo.
@@ -47,9 +47,9 @@ Aquí encontrarás una selección de los proyectos más significativos que he de
 * **Descripción:** Implementación del famoso algoritmo de optimización y ordenamiento de páginas web basado en cadenas de Markov y vectores propios (Eigenvectors). El proyecto modela la web como un grafo dirigido para calcular la probabilidad de que un usuario llegue a un sitio específico, resolviendo el problema de convergencia mediante el factor de amortiguación (Damping Factor).
 * **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Algoritmo-PageRank-Google)
   
-### 🔹 5. Sistema de Business Intelligence y Procesos ETL
-* **Descripción:** Diseño e implementación de un flujo de datos de extremo a extremo (End-to-End). Incluye el modelado de la base de datos relacional, la creación de procesos ETL para la extracción y transformación de datos, y el desarrollo de un dashboard interactivo para el análisis de métricas clave y toma de decisiones.
-* **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/%20Inteligencia-Negocio/Proyecto)
+### 🔹 5. Compresión de Imágenes mediante SVD
+* **Descripción:** Aplicación de álgebra lineal numérica (Descomposición en Valores Singulares) para comprimir imágenes reduciendo el tamaño del archivo mientras se preserva la calidad visual. Desarrollado con Python (NumPy, SciPy).
+* **Ver proyecto:** [👉 Ir al Repositorio](https://github.com/Niebla-313/Projects/tree/main/Computacion-Cientifica/Compresion-Imagenes-SVD)
 
 ---
 
