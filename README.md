@@ -55,7 +55,7 @@ Aquí encontrarás una selección de los proyectos más significativos que he de
 
 ## 📈 Mis Estadísticas de GitHub
 
-![Estadísticas de Anthony](https://github-readme-stats.vercel.app/api?username=Niebla-313&show_icons=true&theme=radical)
+![Estadísticas de Anthony](https://github-readme-stats-sigma-five.vercel.app/api?username=Niebla-313&show_icons=true&theme=radical)
 ![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=Niebla-313&layout=compact&theme=radical)
 
 ---
