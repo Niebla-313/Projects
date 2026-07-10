@@ -1,15 +1,20 @@
-# 📊 Proyecto de Inteligencia de Negocios (BI) End-to-End
+# 📊 Proyecto de Inteligencia de Negocios (BI)
 
-Solución completa y 100% reproducible de Business Intelligence (BI). Incluye la infraestructura contenedorizada de la base de datos, el pipeline de datos automatizado y el reporte interactivo final listo para su análisis.
+Solución de Inteligencia de Negocios integral, diseñada bajo una arquitectura escalable y reproducible. Este proyecto abarca desde el modelado dimensional hasta la visualización de indicadores estratégicos (KPIs).
 
----
-# 📁 Fase 1:
+## 📁 Estructura del Proyecto
 
-En esta carpeta se encuentra el enunciado del proyecto, así como su análisis teórico.
+### 📂 Fase 1: Análisis y Diseño
+Contiene la documentación fundamental del proyecto:
+* **Enunciado:** Definición del alcance y objetivos del negocio.
+* **Análisis Teórico:** Diseño del modelo dimensional (*Esquema de Constelación*), definición de granularidad, tablas de hechos y dimensiones.
 
-# 📁 Fase 2:
-
-En esta carpeta se localiza todo lo necesario para reproducir el proyecto: la creación de la base de datos, el flujo de carga, la limpieza de datos para el modelo relacional y la visualización de los indicadores clave en Power BI.
+### 📂 Fase 2: Implementación y Reproducibilidad
+Contiene el código fuente y los activos técnicos necesarios para la ejecución:
+* **Infraestructura:** Scripts de despliegue de base de datos contenedorizada (Docker/PostgreSQL).
+* **Pipeline ETL:** Procesos de extracción, transformación y carga (Pentaho PDI).
+* **Modelado:** Scripts SQL de creación del Data Warehouse y limpieza de datos.
+* **Visualización:** Reporte interactivo (Power BI) para el monitoreo de KPIs.
 
 ---
 <p align="center">
