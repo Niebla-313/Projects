@@ -15,7 +15,7 @@ A nivel de Ciencias de la Computación y Modelado Matemático, el problema se ab
 * **Método Numérico (RK4):** Se implementa de forma nativa el algoritmo de Runge-Kutta de 4to Orden para aproximar la solución paso a paso, logrando un error de truncamiento local de $\mathcal{O}(h^5)$ sin depender de librerías externas de integración.
 
 * **Análisis de Umbral y Conservación:** Se evalúa analítica y numéricamente el Número Básico de Reproducción ($R_0$) y se comprueba la conservación estricta de la población total ($S + E + I + R = N$) en cada paso de tiempo.
-
+---
 ## 🛠️ Tecnologías Utilizadas
 
 * Python 3
@@ -23,15 +23,19 @@ A nivel de Ciencias de la Computación y Modelado Matemático, el problema se ab
 * NumPy (Para el manejo estructurado de arreglos y trazado de curvas)
 
 * Matplotlib (Para la visualización de la evolución temporal de los compartimientos)
+---
+## 📦 Cómo Ejecutar el Proyecto:
 
-## 📦 Cómo Ejecutar el Proyecto (Opción 1):
+1. Descargar la carpeta correspondiente a Modelización de Epidemias.
 
-1. Descargar la carpeta del repositorio correspondiente al Taller 5.
-
-2. Ejecutar el script principal: `codigo.py`
-
-## 📦 Cómo Ejecutar el Proyecto (Opción 2):
-
-* Dar clic aquí para visualizar o interactuar con el entorno en línea.
+2. Ejcutar el archivo con `python codigo.py`. 
 
 ⬆️ Volver a [Computacion-Cientifica](../README.md)
+
+---
+
+<p align="center">
+  <a href="https://github.com/Niebla-313/Projects">
+    <img src="https://img.shields.io/badge/Volver%20al%20Portafolio%20Principal-00599C?style=for-the-badge&logo=github&logoColor=white" alt="Volver al inicio">
+  </a>
+</p>
