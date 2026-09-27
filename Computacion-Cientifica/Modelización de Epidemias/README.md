@@ -26,7 +26,7 @@ A nivel de Ciencias de la Computación y Modelado Matemático, el problema se ab
 ---
 ## 📦 Cómo Ejecutar el Proyecto:
 
-1. Descargar la carpeta correspondiente a Modelización de Epidemias.
+1. Descargar el archivo llamado `codigo.py`.
 
 2. Ejcutar el archivo con `python codigo.py`. 
 
