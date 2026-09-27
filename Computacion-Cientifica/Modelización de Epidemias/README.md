@@ -1,10 +1,10 @@
-#🦠 Modelación Epidemiológica y Sistemas Dinámicos
+# 🦠 Modelación Epidemiológica
 
-##📝 Descripción del Proyecto
+## 📝 Descripción del Proyecto
 
 Este proyecto consiste en la resolución numérica del **Modelo SEIR** (Susceptibles-Expuestos-Infectados-Recuperados) mediante la implementación manual del método de Runge-Kutta de 4to Orden (RK4). Desarrollado en el contexto de la asignatura de Cálculo Científico, el objetivo principal es simular el comportamiento dinámico de una epidemia en una población, evaluando cómo las intervenciones no farmacológicas (como el confinamiento) alteran la propagación del virus a lo largo del tiempo.
 
-##🧮 Fundamentos Matemáticos y Enfoque Técnico
+## 🧮 Fundamentos Matemáticos y Enfoque Técnico
 
 A nivel de Ciencias de la Computación y Modelado Matemático, el problema se aborda mediante sistemas de Ecuaciones Diferenciales Ordinarias (EDO):
 
@@ -16,7 +16,7 @@ A nivel de Ciencias de la Computación y Modelado Matemático, el problema se ab
 
 * **Análisis de Umbral y Conservación:** Se evalúa analítica y numéricamente el Número Básico de Reproducción ($R_0$) y se comprueba la conservación estricta de la población total ($S + E + I + R = N$) en cada paso de tiempo.
 
-##🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 * Python 3
 
@@ -24,13 +24,13 @@ A nivel de Ciencias de la Computación y Modelado Matemático, el problema se ab
 
 * Matplotlib (Para la visualización de la evolución temporal de los compartimientos)
 
-##📦 Cómo Ejecutar el Proyecto (Opción 1):
+## 📦 Cómo Ejecutar el Proyecto (Opción 1):
 
 1. Descargar la carpeta del repositorio correspondiente al Taller 5.
 
 2. Ejecutar el script principal: `codigo.py`
 
-📦 Cómo Ejecutar el Proyecto (Opción 2):
+## 📦 Cómo Ejecutar el Proyecto (Opción 2):
 
 * Dar clic aquí para visualizar o interactuar con el entorno en línea.
 
